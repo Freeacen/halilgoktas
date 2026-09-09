@@ -458,16 +458,15 @@ function initLanguage() {
   if (savedLang && (savedLang === "tr" || savedLang === "en")) {
     currentLang = savedLang;
   } else {
-    // Cihaz/tarayıcı dilini tespit et
-    const primaryLang = (navigator.language || navigator.userLanguage || "").toLowerCase();
-    const allLangs = (navigator.languages || []).map(l => (l || "").toLowerCase());
+    // Cihaz dili tespiti:
+    // Cihaz dili Türkçe ise veya algılanamıyorsa -> Türkçe
+    // Türkçe dışında herhangi bir dil algılanırsa -> İngilizce
+    const deviceLang = (navigator.language || navigator.userLanguage || "").toLowerCase().trim();
 
-    if (primaryLang.startsWith("tr") || allLangs.some(l => l.startsWith("tr"))) {
+    if (!deviceLang || deviceLang.startsWith("tr")) {
       currentLang = "tr";
-    } else if (primaryLang.startsWith("en") || allLangs.some(l => l.startsWith("en"))) {
-      currentLang = "en";
     } else {
-      currentLang = "tr"; // Varsayılan dil Türkçe
+      currentLang = "en";
     }
   }
 
