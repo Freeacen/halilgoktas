@@ -716,49 +716,92 @@ button, input, textarea {
   color: var(--text-muted);
 }
 
-.profile-avatar-wrapper {
+/* 3D Yaşayan Pop-Out Karakter Sahnesi */
+.profile-avatar-stage {
   position: relative;
-  width: 200px;
-  margin: 0 auto 24px auto;
+  width: 100%;
+  max-width: 340px;
+  height: 185px;
+  margin: 0 auto 20px auto;
   display: flex;
   justify-content: center;
+  align-items: flex-end;
+  perspective: 1000px;
 }
 
-.avatar-circle {
-  width: 130px;
-  height: 130px;
+/* Holografik Arka Plan Portal Halkası */
+.portal-ring {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 138px;
+  height: 138px;
   border-radius: 50%;
-  padding: 4px;
-  background: var(--gradient-accent);
-  box-shadow: var(--shadow-glow);
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background: radial-gradient(circle, rgba(14, 165, 233, 0.28) 0%, rgba(37, 99, 235, 0.38) 75%, rgba(14, 165, 233, 0.65) 100%);
+  border: 2px solid rgba(56, 189, 248, 0.7);
+  box-shadow: 0 0 26px rgba(14, 165, 233, 0.45), inset 0 0 18px rgba(14, 165, 233, 0.3);
+  animation: portalGlowPulse 4s ease-in-out infinite;
+  z-index: 1;
 }
 
-.avatar-circle picture {
+@keyframes portalGlowPulse {
+  0%, 100% {
+    box-shadow: 0 0 22px rgba(14, 165, 233, 0.4), inset 0 0 14px rgba(14, 165, 233, 0.25);
+    border-color: rgba(56, 189, 248, 0.6);
+  }
+  50% {
+    box-shadow: 0 0 36px rgba(14, 165, 233, 0.7), inset 0 0 22px rgba(14, 165, 233, 0.45);
+    border-color: rgba(56, 189, 248, 0.95);
+  }
+}
+
+/* Daireden Dışarı Taşan 3D Karakter */
+.character-wrapper {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 175px;
+  height: 175px;
+  transform-origin: bottom center;
+  animation: characterFloatLife 4s ease-in-out infinite;
+  will-change: transform;
+}
+
+.character-wrapper picture {
   width: 100%;
   height: 100%;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
 }
 
-.avatar-img {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  object-fit: cover;
+.character-img {
+  width: 175px;
+  height: 175px;
+  object-fit: contain;
   display: block;
+  filter: drop-shadow(0 12px 18px rgba(0, 0, 0, 0.42));
+  transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+  pointer-events: none;
 }
 
-.avatar-svg {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
+.profile-card:hover .character-img {
+  transform: scale(1.03) translateY(-2px);
 }
 
+@keyframes characterFloatLife {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-7px);
+  }
+}
+
+/* Yüzen Vurgu Rozetleri (Dengeli Mesafe: Ne Çok Uzak, Ne Çok Yakın) */
 .floating-badge {
   position: absolute;
   padding: 6px 14px;
@@ -768,21 +811,32 @@ button, input, textarea {
   background: var(--bg-surface);
   border: 1px solid var(--border-color);
   box-shadow: var(--shadow-md);
-  animation: float 3s ease-in-out infinite;
+  z-index: 3;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   white-space: nowrap;
-  z-index: 2;
 }
 
 .badge-code {
-  top: 12px;
-  left: -36px;
-  animation-delay: 0s;
+  top: 18px;
+  right: calc(50% + 94px);
+  animation: floatBadgeCode 3.8s ease-in-out infinite;
 }
 
 .badge-tech {
-  bottom: 8px;
-  right: -46px;
-  animation-delay: 1.5s;
+  bottom: 12px;
+  left: calc(50% + 94px);
+  animation: floatBadgeTech 3.8s ease-in-out infinite 1.9s;
+}
+
+@keyframes floatBadgeCode {
+  0%, 100% { transform: translateY(0) rotate(-1deg); }
+  50% { transform: translateY(-7px) rotate(1.5deg); }
+}
+
+@keyframes floatBadgeTech {
+  0%, 100% { transform: translateY(0) rotate(1deg); }
+  50% { transform: translateY(-7px) rotate(-1.5deg); }
 }
 
 
@@ -1920,30 +1974,48 @@ button, input, textarea {
     border-radius: var(--radius-md);
   }
 
-  .profile-avatar-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
+  /* Profil Kartı Sahnesi Mobil */
+  .profile-avatar-stage {
     position: relative;
-    margin-bottom: 16px;
     width: 100%;
+    height: 165px;
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
   }
 
-  .avatar-circle {
-    width: 96px;
-    height: 96px;
-    margin-bottom: 4px;
+  .portal-ring {
+    width: 120px;
+    height: 120px;
+  }
+
+  .character-wrapper {
+    width: 152px;
+    height: 152px;
+  }
+
+  .character-img {
+    width: 152px;
+    height: 152px;
   }
 
   .floating-badge {
-    position: static !important;
-    display: inline-flex;
-    animation: none !important;
-    transform: none !important;
-    font-size: 0.72rem;
-    padding: 4px 10px;
-    margin: 2px;
+    position: absolute !important;
+    font-size: 0.72rem !important;
+    padding: 4px 10px !important;
+  }
+
+  .badge-code {
+    top: 6px !important;
+    right: auto !important;
+    left: 4px !important;
+  }
+
+  .badge-tech {
+    bottom: 4px !important;
+    left: auto !important;
+    right: 4px !important;
   }
 
   .profile-code-snippet {
