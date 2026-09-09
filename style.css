@@ -1838,20 +1838,18 @@ button, input, textarea {
   }
 
   .hero-typewriter-wrapper {
-    font-size: 1.05rem;
-    min-height: auto;
-    flex-wrap: wrap;
+    font-size: clamp(0.9rem, 3.8vw, 1.05rem);
+    min-height: 28px;
+    flex-wrap: nowrap;
+    white-space: nowrap;
     justify-content: center;
     text-align: center;
     max-width: 100%;
-    word-break: break-word;
-    overflow-wrap: break-word;
     margin-bottom: 16px;
   }
 
   .typewriter-text {
-    word-break: break-word;
-    overflow-wrap: break-word;
+    white-space: nowrap;
   }
 
   .hero-description {

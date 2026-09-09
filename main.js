@@ -35,10 +35,10 @@ const TRANSLATIONS = {
       name: "Halil Göktaş",
       typewriterPrefix: "Ben bir",
       roles: [
-        "Otomotiv Mühendisiyim.",
-        "Tasarım Mühendisiyim (CATIA).",
-        "Bağımsız Geliştiriciyim (Indie Dev).",
-        "Mobil & Web Çözümleri Üreticisiyim."
+        "Otomotiv Mühendisiyim",
+        "Tasarım Mühendisiyim (CATIA)",
+        "Bağımsız Geliştiriciyim",
+        "Mobil & Web Geliştiricisiyim"
       ],
       desc: "Otomotiv tasarımı ve mühendislik disiplinini modern yazılım vizyonuyla birleştiriyorum. Mekanik sistemler, CAD parça modelleme ve yenilikçi Flutter mobil / web çözümleri üretiyorum.",
       viewProjects: "Projelerimi Gör",
@@ -244,12 +244,12 @@ const TRANSLATIONS = {
       badge: "Available for New Projects & Opportunities",
       greeting: "Hello, I am",
       name: "Halil Göktaş",
-      typewriterPrefix: "I am an",
+      typewriterPrefix: "I am",
       roles: [
-        "Automotive Engineer.",
-        "Mechanical Design Engineer (CATIA).",
-        "Indie Developer.",
-        "Mobile & Web Solutions Creator."
+        "a Design Engineer (CATIA)",
+        "an Automotive Engineer",
+        "an Indie Developer",
+        "a Mobile & Web Developer"
       ],
       desc: "Combining automotive design and engineering discipline with modern software development vision. Building CAD models, mechanical systems, and innovative Flutter mobile/web solutions.",
       viewProjects: "View Projects",
