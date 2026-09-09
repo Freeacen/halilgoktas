@@ -716,80 +716,40 @@ button, input, textarea {
   color: var(--text-muted);
 }
 
-/* 3D Yaşayan Karakter Sahnesi & Pop-Out Portal Efekti */
-.profile-avatar-stage {
+.profile-avatar-wrapper {
   position: relative;
   display: flex;
   justify-content: center;
-  align-items: flex-end;
-  height: 185px;
-  margin-bottom: 22px;
-  perspective: 1000px;
+  margin-bottom: 24px;
 }
 
-/* Holografik Arka Plan Portal Halkası */
-.portal-ring {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 136px;
-  height: 136px;
+.avatar-circle {
+  width: 130px;
+  height: 130px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(14, 165, 233, 0.28) 0%, rgba(37, 99, 235, 0.45) 75%, rgba(14, 165, 233, 0.7) 100%);
-  border: 2px solid rgba(56, 189, 248, 0.7);
-  box-shadow: 0 0 28px rgba(14, 165, 233, 0.5), inset 0 0 20px rgba(14, 165, 233, 0.35);
-  animation: portalGlowPulse 4s ease-in-out infinite;
-  z-index: 1;
-}
-
-@keyframes portalGlowPulse {
-  0%, 100% {
-    box-shadow: 0 0 22px rgba(14, 165, 233, 0.4), inset 0 0 14px rgba(14, 165, 233, 0.25);
-    border-color: rgba(56, 189, 248, 0.6);
-  }
-  50% {
-    box-shadow: 0 0 38px rgba(14, 165, 233, 0.75), inset 0 0 24px rgba(14, 165, 233, 0.45);
-    border-color: rgba(56, 189, 248, 0.95);
-  }
-}
-
-/* Daireden Dışarı Taşan 3D Karakter */
-.character-wrapper {
-  position: relative;
-  z-index: 2;
+  padding: 4px;
+  background: var(--gradient-accent);
+  box-shadow: var(--shadow-glow);
+  overflow: hidden;
   display: flex;
+  align-items: center;
   justify-content: center;
-  align-items: flex-end;
-  transform-origin: bottom center;
-  animation: characterFloatLife 4s ease-in-out infinite;
-  will-change: transform;
 }
 
-.character-img {
-  width: 175px;
-  height: 175px;
-  object-fit: contain;
+.avatar-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
   display: block;
-  filter: drop-shadow(0 14px 20px rgba(0, 0, 0, 0.45));
-  transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
-  pointer-events: none;
 }
 
-.profile-card:hover .character-img {
-  transform: scale(1.04) translateY(-3px);
+.avatar-svg {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
 }
 
-@keyframes characterFloatLife {
-  0%, 100% {
-    transform: translateY(0) scale(1);
-  }
-  50% {
-    transform: translateY(-8px) scale(1.015);
-  }
-}
-
-/* Yüzen Vurgu Rozetleri */
 .floating-badge {
   position: absolute;
   padding: 6px 14px;
@@ -799,31 +759,24 @@ button, input, textarea {
   background: var(--bg-surface);
   border: 1px solid var(--border-color);
   box-shadow: var(--shadow-md);
-  z-index: 3;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  animation: float 3s ease-in-out infinite;
 }
 
 .badge-code {
-  top: 15px;
+  top: 10px;
   left: 0;
-  animation: floatBadgeCode 3.8s ease-in-out infinite;
+  animation-delay: 0s;
 }
 
 .badge-tech {
-  bottom: 8px;
+  bottom: 0px;
   right: 0;
-  animation: floatBadgeTech 3.8s ease-in-out infinite 1.9s;
+  animation-delay: 1.5s;
 }
 
-@keyframes floatBadgeCode {
-  0%, 100% { transform: translateY(0) rotate(-1deg); }
-  50% { transform: translateY(-7px) rotate(1.5deg); }
-}
-
-@keyframes floatBadgeTech {
-  0%, 100% { transform: translateY(0) rotate(1deg); }
-  50% { transform: translateY(-7px) rotate(-1.5deg); }
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
 }
 
 .profile-code-snippet {
@@ -1955,36 +1908,30 @@ button, input, textarea {
     border-radius: var(--radius-md);
   }
 
-  /* Profil Kartı Sahnesi Mobil */
-  .profile-avatar-stage {
-    height: 165px;
+  .profile-avatar-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    position: relative;
     margin-bottom: 16px;
+    width: 100%;
   }
 
-  .portal-ring {
-    width: 120px;
-    height: 120px;
-  }
-
-  .character-img {
-    width: 152px;
-    height: 152px;
+  .avatar-circle {
+    width: 96px;
+    height: 96px;
+    margin-bottom: 4px;
   }
 
   .floating-badge {
-    position: absolute !important;
-    font-size: 0.7rem !important;
-    padding: 3px 8px !important;
-  }
-
-  .badge-code {
-    top: 5px !important;
-    left: 2px !important;
-  }
-
-  .badge-tech {
-    bottom: 4px !important;
-    right: 2px !important;
+    position: static !important;
+    display: inline-flex;
+    animation: none !important;
+    transform: none !important;
+    font-size: 0.72rem;
+    padding: 4px 10px;
+    margin: 2px;
   }
 
   .profile-code-snippet {
