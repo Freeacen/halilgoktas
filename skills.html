@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="tr" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Halil Göktaş - Yetenekler: CATIA V5, SolidWorks, İmalat Süreçleri, Flutter, Dart, Web Teknolojileri." />
+  <title>Yetenekler & Uzmanlıklar | Halil Göktaş</title>
+  
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230ea5e9'><path d='M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5'/></svg>" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div id="scroll-progress" class="scroll-progress"></div>
+
+  <div id="toast" class="toast hidden" role="alert" aria-live="polite">
+    <span id="toast-icon">✓</span>
+    <span id="toast-message">Bildirim</span>
+  </div>
+
+  <header class="header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <span class="logo-symbol">&lt;HG/&gt;</span>
+        <span class="logo-text">halilgoktas</span>
+      </a>
+
+      <nav class="nav-menu" id="nav-menu">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link" data-i18n="nav.home">Ana Sayfa</a></li>
+          <li><a href="skills.html" class="nav-link active" data-i18n="nav.skills">Yetenekler</a></li>
+          <li><a href="experience.html" class="nav-link" data-i18n="nav.experience">Deneyim</a></li>
+          <li><a href="projects.html" class="nav-link" data-i18n="nav.projects">Projeler</a></li>
+          <li><a href="contact.html" class="nav-link" data-i18n="nav.contact">İletişim</a></li>
+          <li><a href="about.html" class="nav-link" data-i18n="nav.about">Hakkımda</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="lang-toggle" class="btn-lang" aria-label="Dili Değiştir / Change Language" title="Türkçe / English">
+          <span id="lang-tr-badge" class="lang-active">TR</span>
+          <span class="lang-sep">|</span>
+          <span id="lang-en-badge" class="lang-inactive">EN</span>
+        </button>
+
+        <button id="theme-toggle" class="icon-btn" aria-label="Temayı Değiştir" title="Temayı Değiştir">
+          <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+
+        <a href="contact.html" class="btn btn-primary btn-sm hide-mobile" data-i18n="nav.contactBtn">İletişime Geç</a>
+
+        <button id="mobile-toggle" class="icon-btn mobile-toggle" aria-label="Menüyü Aç/Kapat">
+          <svg class="menu-open-icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+          <svg class="menu-close-icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-section">
+    <div class="container">
+      
+      <div class="section-header text-center">
+        <span class="section-badge" data-i18n="skills.badge">Teknoloji Yığını</span>
+        <h1 class="section-title" data-i18n="skills.title">Yetenekler & Uzmanlıklar</h1>
+        <p class="section-subtitle" data-i18n="skills.subtitle">
+          Mühendislik ve yazılım projelerimde aktif olarak kullandığım araçlar, standartlar ve teknolojiler.
+        </p>
+      </div>
+
+      <!-- Kategori Filtreleme Sekmeleri -->
+      <div class="filter-tabs" id="skill-filter-tabs">
+        <button class="filter-tab active" data-filter="all" data-i18n="skills.tabs.all">Tümü</button>
+        <button class="filter-tab" data-filter="cad" data-i18n="skills.tabs.cad">CAD & Mühendislik</button>
+        <button class="filter-tab" data-filter="mobile" data-i18n="skills.tabs.mobile">Mobil & Flutter</button>
+        <button class="filter-tab" data-filter="web" data-i18n="skills.tabs.web">Web & Diller</button>
+      </div>
+
+      <!-- Yetenek Kartları Izgarası -->
+      <div class="skills-grid">
+        <!-- 1. CATIA V5 -->
+        <div class="skill-card glass-card" data-category="cad">
+          <div class="skill-header">
+            <span class="skill-icon">📐</span>
+            <span class="skill-badge" data-i18n="skills.levels.advanced">İleri Düzey</span>
+          </div>
+          <h3 class="skill-name">CATIA V5</h3>
+          <p class="skill-desc" data-i18n="skills.catiaDesc">
+            3D parça tasarımı (Part Design), montaj modelleme (Assembly), sac metal (Generative Sheetmetal) ve teknik resim hazırlama.
+          </p>
+          <div class="skill-meter">
+            <div class="skill-meter-fill" style="width: 90%;"></div>
+          </div>
+        </div>
+
+        <!-- 2. SolidWorks -->
+        <div class="skill-card glass-card" data-category="cad">
+          <div class="skill-header">
+            <span class="skill-icon">⚙️</span>
+            <span class="skill-badge" data-i18n="skills.levels.intermediate">Orta Düzey</span>
+          </div>
+          <h3 class="skill-name">SolidWorks</h3>
+          <p class="skill-desc" data-i18n="skills.solidworksDesc">
+            3D katı modelleme, mekanik montajlar, parça tasarımı ve teknik resimlendirme süreçleri.
+          </p>
+          <div class="skill-meter">
+            <div class="skill-meter-fill" style="width: 75%;"></div>
+          </div>
+        </div>
+
+        <!-- 3. İmalat Süreçleri & Problem Çözme -->
+        <div class="skill-card glass-card" data-category="cad">
+          <div class="skill-header">
+            <span class="skill-icon">🛠️</span>
+            <span class="skill-badge" data-i18n="skills.levels.proficient">Yetkin</span>
+          </div>
+          <h3 class="skill-name" data-i18n="skills.manufacturingTitle">İmalat Süreçleri & Problem Çözme</h3>
+          <p class="skill-desc" data-i18n="skills.manufacturingDesc">
+            Atölye ve imalat süreçlerine (talaşlı imalat, montaj ve üretim adımları) saha hakimiyeti; tasarımdan üretime kadar karşılaşılan teknik aksaklıklara analitik ve uygulanabilir mühendislik çözümleri üretme.
+          </p>
+          <div class="skill-meter">
+            <div class="skill-meter-fill" style="width: 82%;"></div>
+          </div>
+        </div>
+
+        <!-- 4. Flutter -->
+        <div class="skill-card glass-card" data-category="mobile">
+          <div class="skill-header">
+            <span class="skill-icon">📱</span>
+            <span class="skill-badge" data-i18n="skills.levels.advanced">İleri Düzey</span>
+          </div>
+          <h3 class="skill-name">Flutter</h3>
+          <p class="skill-desc" data-i18n="skills.flutterDesc">
+            Android ve iOS için modern, performanslı ve akıcı çapraz platform mobil uygulamalar geliştirme.
+          </p>
+          <div class="skill-meter">
+            <div class="skill-meter-fill" style="width: 88%;"></div>
+          </div>
+        </div>
+
+        <!-- 5. Dart -->
+        <div class="skill-card glass-card" data-category="mobile">
+          <div class="skill-header">
+            <span class="skill-icon">🎯</span>
+            <span class="skill-badge" data-i18n="skills.levels.advanced">İleri Düzey</span>
+          </div>
+          <h3 class="skill-name">Dart Programlama</h3>
+          <p class="skill-desc" data-i18n="skills.dartDesc">
+            Nesne yönelimli programlama, asenkron yapılar, durum yönetimi (State Management) ve REST API entegrasyonları.
+          </p>
+          <div class="skill-meter">
+            <div class="skill-meter-fill" style="width: 85%;"></div>
+          </div>
+        </div>
+
+        <!-- 6. HTML5 & CSS3 -->
+        <div class="skill-card glass-card" data-category="web">
+          <div class="skill-header">
+            <span class="skill-icon">🌐</span>
+            <span class="skill-badge" data-i18n="skills.levels.advanced">İleri Düzey</span>
+          </div>
+          <h3 class="skill-name">HTML5 & Modern CSS3</h3>
+          <p class="skill-desc" data-i18n="skills.htmlCssDesc">
+            Responsive tasarım, CSS Grid/Flexbox, camgöbeği glassmorphism ve semantik modern web standartları.
+          </p>
+          <div class="skill-meter">
+            <div class="skill-meter-fill" style="width: 90%;"></div>
+          </div>
+        </div>
+
+        <!-- 7. PHP & Backend -->
+        <div class="skill-card glass-card" data-category="web">
+          <div class="skill-header">
+            <span class="skill-icon">🐘</span>
+            <span class="skill-badge" data-i18n="skills.levels.intermediate">Orta Düzey</span>
+          </div>
+          <h3 class="skill-name">PHP & Web Backend</h3>
+          <p class="skill-desc" data-i18n="skills.phpDesc">
+            Dinamik web arka yüzleri, form doğrulama, oturum yönetimi ve veritabanı entegrasyonlu servisler.
+          </p>
+          <div class="skill-meter">
+            <div class="skill-meter-fill" style="width: 72%;"></div>
+          </div>
+        </div>
+
+        <!-- 8. SQL & Veritabanı -->
+        <div class="skill-card glass-card" data-category="web">
+          <div class="skill-header">
+            <span class="skill-icon">🗄️</span>
+            <span class="skill-badge" data-i18n="skills.levels.intermediate">Orta Düzey</span>
+          </div>
+          <h3 class="skill-name">SQL & MySQL</h3>
+          <p class="skill-desc" data-i18n="skills.sqlDesc">
+            İlişkisel veritabanı mimarisi, CRUD operasyonları, MySQL sorguları ve veri güvenliği yapılandırması.
+          </p>
+          <div class="skill-meter">
+            <div class="skill-meter-fill" style="width: 75%;"></div>
+          </div>
+        </div>
+
+        <!-- 9. Git & GitHub -->
+        <div class="skill-card glass-card" data-category="web">
+          <div class="skill-header">
+            <span class="skill-icon">🐙</span>
+            <span class="skill-badge" data-i18n="skills.levels.proficient">Yetkin</span>
+          </div>
+          <h3 class="skill-name">Git & Versiyon Kontrolü</h3>
+          <p class="skill-desc" data-i18n="skills.gitDesc">
+            Git iş akışları, branch stratejileri, versiyonlama ve GitHub üzerinde açık kaynak/özel repo yönetimi.
+          </p>
+          <div class="skill-meter">
+            <div class="skill-meter-fill" style="width: 82%;"></div>
+          </div>
+        </div>
+
+        <!-- 10. Java, TypeScript & Python -->
+        <div class="skill-card glass-card" data-category="web">
+          <div class="skill-header">
+            <span class="skill-icon">💻</span>
+            <span class="skill-badge" data-i18n="skills.levels.foundational">Temel / Gelişen</span>
+          </div>
+          <h3 class="skill-name">Java, TypeScript & Python</h3>
+          <p class="skill-desc" data-i18n="skills.javaTsPyDesc">
+            Veri işleme, otomasyon scriptleri; Java ve TypeScript ile modern yazılım geliştirme pratikleri.
+          </p>
+          <div class="skill-meter">
+            <div class="skill-meter-fill" style="width: 65%;"></div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <span class="logo-symbol">&lt;HG/&gt;</span>
+          <span class="logo-text">halilgoktas</span>
+        </a>
+        <p class="footer-desc" data-i18n="footer.desc">
+          Otomotiv mekanik tasarım mühendisliği ve modern yazılım çözümleri kişisel vitrini.
+        </p>
+      </div>
+
+      <ul class="footer-nav">
+        <li><a href="index.html" data-i18n="nav.home">Ana Sayfa</a></li>
+        <li><a href="skills.html" data-i18n="nav.skills">Yetenekler</a></li>
+        <li><a href="experience.html" data-i18n="nav.experience">Deneyim</a></li>
+        <li><a href="projects.html" data-i18n="nav.projects">Projeler</a></li>
+        <li><a href="contact.html" data-i18n="nav.contact">İletişim</a></li>
+        <li><a href="about.html" data-i18n="nav.about">Hakkımda</a></li>
+      </ul>
+
+      <div class="footer-bottom">
+        <p class="copyright">
+          &copy; <span id="current-year">2026</span> <span data-i18n="footer.copyright">Halil Göktaş. Tüm hakları saklıdır.</span>
+        </p>
+        <p class="credits" data-i18n="footer.credits">
+          Mühendislik disiplini ve modern web standartları ile geliştirildi.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <button id="back-to-top" class="back-to-top" aria-label="Yukarı Çık" title="Yukarı Çık">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+  </button>
+
+  <script src="main.js"></script>
+</body>
+</html>
