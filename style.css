@@ -718,9 +718,10 @@ button, input, textarea {
 
 .profile-avatar-wrapper {
   position: relative;
+  width: 200px;
+  margin: 0 auto 24px auto;
   display: flex;
   justify-content: center;
-  margin-bottom: 24px;
 }
 
 .avatar-circle {
@@ -731,6 +732,14 @@ button, input, textarea {
   background: var(--gradient-accent);
   box-shadow: var(--shadow-glow);
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar-circle picture {
+  width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -760,19 +769,22 @@ button, input, textarea {
   border: 1px solid var(--border-color);
   box-shadow: var(--shadow-md);
   animation: float 3s ease-in-out infinite;
+  white-space: nowrap;
+  z-index: 2;
 }
 
 .badge-code {
-  top: 10px;
-  left: 0;
+  top: 12px;
+  left: -36px;
   animation-delay: 0s;
 }
 
 .badge-tech {
-  bottom: 0px;
-  right: 0;
+  bottom: 8px;
+  right: -46px;
   animation-delay: 1.5s;
 }
+
 
 @keyframes float {
   0%, 100% { transform: translateY(0); }
