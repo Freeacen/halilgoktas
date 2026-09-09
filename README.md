@@ -26,7 +26,6 @@ kisisel-web-sitesi/
 ├── experience.html            # Deneyim sayfası (Grebo, Pimsun, Indie Dev, üniversite & sertifikalar)
 ├── projects.html              # Projeler sayfası (Yakında eklenecek vitrini & önizleme kartları)
 ├── contact.html               # İletişim sayfası (1-tıkla kopyalama, doğrudan kanallar, form)
-├── index-single-page.html     # Karşılaştırma için tek sayfa (one-page scroll) yedeği
 ├── style.css                  # CAD & Hassas Mühendislik CSS tasarım sistemi
 ├── main.js                    # Çoklu sayfa yönlendirmesi, eksiksiz i18n & tema motoru
 ├── Halil_Goktas_CV_TR.pdf     # Türkçe CV (PDF)
@@ -41,7 +40,6 @@ kisisel-web-sitesi/
 1. `C:\Users\t-rex\.gemini\antigravity\scratch\kisisel-web-sitesi\` klasörüne gidin.
 2. `index.html` dosyasına çift tıklayarak tarayıcınızda (Chrome, Edge vb.) açın.
 3. Sağ üstteki **TR | EN** butonu ile dili değiştirebilir, **Güneş / Ay** butonu ile koyu ve açık mod arasında geçiş yapabilirsiniz.
-4. Tek sayfa deneyimini görmek veya kıyaslamak isterseniz `index-single-page.html` dosyasını da tarayıcınızda açabilirsiniz.
 
 ---
 

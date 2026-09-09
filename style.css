@@ -536,6 +536,10 @@ button, input, textarea {
   align-items: center;
   padding: 60px 0 80px;
   overflow: hidden;
+  overflow-x: clip;
+  contain: paint;
+  max-width: 100vw;
+  width: 100%;
 }
 
 .hero-background-glow {
@@ -543,10 +547,11 @@ button, input, textarea {
   top: -10%;
   left: 50%;
   transform: translateX(-50%);
-  width: 720px;
-  height: 500px;
+  width: min(720px, 100vw);
+  max-width: 100vw;
+  height: 450px;
   background: radial-gradient(circle, rgba(14, 165, 233, 0.22) 0%, rgba(37, 99, 235, 0.12) 42%, transparent 70%);
-  filter: blur(90px);
+  filter: blur(70px);
   pointer-events: none;
   z-index: 0;
 }
@@ -1774,49 +1779,198 @@ button, input, textarea {
 }
 
 @media (max-width: 768px) {
+  .container {
+    padding: 0 16px;
+  }
+
   .section {
-    padding: 70px 0;
+    padding: 60px 0;
   }
 
   .hero-section {
-    padding: 40px 0 60px;
-    overflow-x: hidden;
-  }
-
-  .hero-container, .hero-content, .hero-visual {
-    max-width: 100%;
+    padding: 35px 0 50px;
+    overflow: hidden;
+    overflow-x: clip;
+    contain: paint;
+    max-width: 100vw;
     width: 100%;
   }
 
-  .hero-title {
-    font-size: clamp(2rem, 7.5vw, 2.5rem);
-    word-break: break-word;
-    overflow-wrap: break-word;
+  .hero-container {
+    grid-template-columns: 100%;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    gap: 32px;
   }
 
-  .hero-typewriter-wrapper {
-    font-size: 1.15rem;
-    min-height: auto;
-  }
-
-  .hero-description {
-    font-size: 1rem;
-    word-break: break-word;
-    overflow-wrap: break-word;
+  .hero-content, .hero-visual {
+    max-width: 100%;
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
   }
 
   .badge-pill {
+    font-size: 0.75rem;
+    padding: 6px 12px;
     max-width: 100%;
     white-space: normal;
     text-align: center;
+    line-height: 1.4;
+    word-break: break-word;
+    margin-bottom: 18px;
   }
 
-  .profile-card {
+  .hero-title {
+    font-size: clamp(1.85rem, 7vw, 2.3rem);
+    line-height: 1.2;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
+    margin-bottom: 12px;
+  }
+
+  .gradient-text {
+    max-width: 100%;
+    word-break: break-word;
+  }
+
+  .hero-typewriter-wrapper {
+    font-size: 1.05rem;
+    min-height: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    max-width: 100%;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    margin-bottom: 16px;
+  }
+
+  .typewriter-text {
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .hero-description {
+    font-size: 0.95rem;
+    line-height: 1.55;
+    max-width: 100%;
+    padding: 0 4px;
+    word-break: break-word;
+    margin-bottom: 24px;
+  }
+
+  .hero-cta-group {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto 28px;
+    gap: 10px;
+  }
+
+  .hero-cta-group .btn {
+    width: 100%;
+    justify-content: center;
+    padding: 12px 18px;
+    font-size: 0.92rem;
+    box-sizing: border-box;
+  }
+
+  .social-links-row {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
     max-width: 100%;
   }
 
+  /* Profil Kartı Mobil */
+  .profile-card {
+    padding: 16px;
+    margin: 0 auto;
+    max-width: 360px;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: var(--radius-md);
+  }
+
+  .profile-avatar-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+    margin-bottom: 16px;
+    width: 100%;
+  }
+
+  .avatar-circle {
+    width: 96px;
+    height: 96px;
+    margin-bottom: 4px;
+  }
+
+  .floating-badge {
+    position: static !important;
+    display: inline-flex;
+    animation: none !important;
+    transform: none !important;
+    font-size: 0.72rem;
+    padding: 4px 10px;
+    margin: 2px;
+  }
+
+  .profile-code-snippet {
+    padding: 10px 12px;
+    font-size: 0.75rem;
+    overflow-x: hidden;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .profile-code-snippet pre,
+  .profile-code-snippet code {
+    white-space: pre-wrap !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+    max-width: 100%;
+  }
+
+  .profile-stats-row {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 4px !important;
+    padding-top: 10px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .stat-divider {
+    display: none !important;
+  }
+
+  .stat-item {
+    min-width: 0 !important;
+    overflow: hidden !important;
+  }
+
+  .stat-number {
+    font-size: 1.1rem !important;
+  }
+
+  .stat-desc {
+    font-size: 0.62rem !important;
+    line-height: 1.25 !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+
   .section-title {
-    font-size: 1.9rem;
+    font-size: 1.85rem;
   }
 
   .hide-mobile {
@@ -1868,11 +2022,11 @@ button, input, textarea {
   }
 
   .contact-form-card {
-    padding: 24px;
+    padding: 20px;
   }
 
   .timeline-container {
-    padding-left: 24px;
+    padding-left: 20px;
   }
 
   .timeline-container::before {
@@ -1880,98 +2034,7 @@ button, input, textarea {
   }
 
   .timeline-dot {
-    left: -24px;
-  }
-}
-
-/* Küçük Ekran Akıllı Telefonlar (<= 480px) */
-@media (max-width: 480px) {
-  .container {
-    padding: 0 16px;
-  }
-
-  .hero-section {
-    padding: 30px 0 50px;
-  }
-
-  .hero-title {
-    font-size: 1.95rem;
-    line-height: 1.2;
-  }
-
-  .hero-typewriter-wrapper {
-    font-size: 1rem;
-    gap: 4px;
-    line-height: 1.4;
-  }
-
-  .hero-description {
-    font-size: 0.92rem;
-    line-height: 1.55;
-    margin-bottom: 24px;
-  }
-
-  .hero-cta-group {
-    flex-direction: column;
-    align-items: stretch;
-    width: 100%;
-    gap: 10px;
-  }
-
-  .hero-cta-group .btn {
-    width: 100%;
-    justify-content: center;
-    padding: 12px 18px;
-    font-size: 0.92rem;
-  }
-
-  .social-links-row {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-  }
-
-  .profile-card {
-    padding: 16px;
-    border-radius: var(--radius-md);
-  }
-
-  .avatar-circle {
-    width: 110px;
-    height: 110px;
-  }
-
-  .floating-badge {
-    font-size: 0.7rem;
-    padding: 4px 8px;
-  }
-
-  .badge-code {
-    left: -4px;
-    top: 0;
-  }
-
-  .badge-tech {
-    right: -4px;
-    bottom: -4px;
-  }
-
-  .profile-code-snippet {
-    padding: 10px 12px;
-    font-size: 0.76rem;
-  }
-
-  .profile-stats-row {
-    padding-top: 12px;
-    gap: 2px;
-  }
-
-  .stat-number {
-    font-size: 1.15rem;
-  }
-
-  .stat-desc {
-    font-size: 0.65rem;
+    left: -20px;
   }
 
   .explore-grid {
