@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="tr" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Renault Toros motor bloğunun kesilmesiyle yağlama kanallarının incelenmesi ve motor yağlama sisteminin fiziksel örnek üzerinden anlatımı." />
+  <title>Motor Bloğunda Yağlama Kanallarının Görünür Hâle Getirilmesi | Halil Göktaş</title>
+  
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230ea5e9'><path d='M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5'/></svg>" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div id="scroll-progress" class="scroll-progress"></div>
+
+  <div id="toast" class="toast hidden" role="alert" aria-live="polite">
+    <span id="toast-icon">✓</span>
+    <span id="toast-message">Bildirim</span>
+  </div>
+
+  <header class="header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <span class="logo-symbol">&lt;HG/&gt;</span>
+        <span class="logo-text">halilgoktas</span>
+      </a>
+
+      <nav class="nav-menu" id="nav-menu">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link" data-i18n="nav.home">Ana Sayfa</a></li>
+          <li><a href="skills.html" class="nav-link" data-i18n="nav.skills">Yetenekler</a></li>
+          <li><a href="experience.html" class="nav-link" data-i18n="nav.experience">Deneyim</a></li>
+          <li><a href="projects.html" class="nav-link active" data-i18n="nav.projects">Projeler</a></li>
+          <li><a href="about.html" class="nav-link" data-i18n="nav.about">Hakkımda</a></li>
+          <li><a href="contact.html" class="nav-link" data-i18n="nav.contact">İletişim</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="lang-toggle" class="btn-lang" aria-label="Dili Değiştir / Change Language" title="Türkçe / English">
+          <span id="lang-tr-badge" class="lang-active">TR</span>
+          <span class="lang-sep">|</span>
+          <span id="lang-en-badge" class="lang-inactive">EN</span>
+        </button>
+
+        <button id="theme-toggle" class="icon-btn" aria-label="Temayı Değiştir" title="Temayı Değiştir">
+          <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+
+        <a href="contact.html" class="btn btn-primary btn-sm hide-mobile" data-i18n="nav.contactBtn">İletişime Geç</a>
+
+        <button id="mobile-toggle" aria-controls="nav-menu" aria-expanded="false" class="icon-btn mobile-toggle" aria-label="Menüyü Aç/Kapat">
+          <svg class="menu-open-icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+          <svg class="menu-close-icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-section project-detail-page">
+    <div class="container project-detail-container">
+      
+      <!-- Geri Dönüş Bağlantısı -->
+      <nav class="project-detail-breadcrumb" aria-label="Breadcrumb">
+        <a href="projects.html#engine" class="back-link">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+          <span data-i18n="projectEngine.backBtn">Tüm Projelere Dön</span>
+        </a>
+      </nav>
+
+      <!-- Proje Başlık Alanı -->
+      <article class="project-detail-article">
+        <header class="project-detail-header">
+          <div class="badge-pill">
+            <span class="status-dot"></span>
+            <span data-i18n="projectEngine.badge">Bitirme projesi · İki kişilik ekip · 2021</span>
+          </div>
+          <p class="project-detail-meta" data-i18n="projectEngine.meta">Afyon Kocatepe Üniversitesi · Otomotiv Mühendisliği · 2021</p>
+          <h1 class="project-detail-title" data-i18n="projectEngine.title">Motor bloğunda yağlama kanallarının görünür hâle getirilmesi</h1>
+          <p class="project-detail-subtitle" data-i18n="projectEngine.subtitle">Renault Toros motor bloğunun kesilmesiyle yağlama kanallarının incelenmesi ve motor yağlama sisteminin fiziksel örnek üzerinden anlatımı.</p>
+        </header>
+
+        <!-- Ana Atölye Kesit Fotoğrafı -->
+        <figure class="project-detail-figure glass-card">
+          <div class="project-figure-media engine-media">
+            <img src="assets/projects/motor-blogu-kesit.jpg" width="5312" height="2988" alt="Yağlama kanallarını açığa çıkarmak amacıyla kesilmiş motor bloğunun atölye fotoğrafı." data-i18n-alt="projectEngine.photoAlt" loading="eager" decoding="async" />
+          </div>
+          <figcaption class="project-figure-caption">
+            <p data-i18n="projectEngine.photoCaption">Yağlama kanallarını göstermek amacıyla kesilmiş Renault Toros motor bloğu. Bitirme raporu, Şekil 7.1.</p>
+            <a class="project-image-link" href="assets/projects/motor-blogu-kesit.jpg" target="_blank" rel="noopener noreferrer">
+              <span data-i18n="projectEngine.openImage">Görseli tam boyutta aç</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+            </a>
+          </figcaption>
+        </figure>
+
+        <!-- Bilgi Bölümleri Izgarası (Amaç & Süreç) -->
+        <div class="project-detail-sections">
+          <!-- Amaç -->
+          <section class="project-info-card glass-card">
+            <div class="project-info-header">
+              <div class="project-info-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="2" r="2"></circle></svg>
+              </div>
+              <h2 class="project-info-heading" data-i18n="projectEngine.objHeading">Amaç</h2>
+            </div>
+            <p class="project-info-desc" data-i18n="projectEngine.objDesc">Motor içindeki yağlama yollarını fiziksel bir örnek üzerinde göstermek amacıyla Renault Toros motor bloğundaki yağ kanallarını kesit alarak görünür hâle getirmek.</p>
+          </section>
+
+          <!-- Süreç ve Katkım -->
+          <section class="project-info-card glass-card">
+            <div class="project-info-header">
+              <div class="project-info-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+              </div>
+              <h2 class="project-info-heading" data-i18n="projectEngine.procHeading">Süreç ve Katkım</h2>
+            </div>
+            <p class="project-info-desc" data-i18n="projectEngine.procDesc">Motor bloğunu temin ettim, kesimi gerçekleştirecek işletmeyi buldum ve kesim sürecini organize ettim. Raporu gözden geçirerek hazırlanmasına katkı sağladım. İki kişilik projede, proje ortağım rapor hazırlığına ve bütçeye katkıda bulundu.</p>
+          </section>
+        </div>
+
+        <!-- Bilgi Bölümleri Izgarası (Teknik Kapsam & Çıktı) -->
+        <div class="project-detail-sections">
+          <!-- Teknik Kapsam -->
+          <section class="project-info-card glass-card">
+            <div class="project-info-header">
+              <div class="project-info-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+              </div>
+              <h2 class="project-info-heading" data-i18n="projectEngine.scopeHeading">Teknik Kapsam</h2>
+            </div>
+            <p class="project-info-desc" data-i18n="projectEngine.scopeDesc">Çalışmada yağlama sisteminin bileşenleri ve görevleri ele alındı. Kesilmiş motor bloğu, raporda açıklanan yağ kanallarını fiziksel bir örnek üzerinden incelemek ve anlatmak için kullanıldı.</p>
+          </section>
+
+          <!-- Çıktı -->
+          <section class="project-info-card glass-card project-outcome-card">
+            <div class="project-info-header">
+              <div class="project-info-icon outcome-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </div>
+              <h2 class="project-info-heading" data-i18n="projectEngine.outHeading">Çıktı</h2>
+            </div>
+            <p class="project-info-desc" data-i18n="projectEngine.outDesc">Yağlama kanalları görünür hâle getirilmiş bir motor bloğu ve motor yağlama sistemini açıklayan ortak bitirme raporu.</p>
+          </section>
+        </div>
+
+        <!-- Projeler Arası Gezinti -->
+        <nav class="project-nav-footer" aria-label="Projeler Arası Gezinti">
+          <a href="project-shock-absorber.html" class="btn btn-secondary">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+            <span data-i18n="projectEngine.prevProject">Önceki Proje: Amortisör CAD Montajı</span>
+          </a>
+          <a href="projects.html#engine" class="btn btn-primary">
+            <span data-i18n="projectEngine.backBtn">Tüm Projelere Dön</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+        </nav>
+
+      </article>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <span class="logo-symbol">&lt;HG/&gt;</span>
+          <span class="logo-text">halilgoktas</span>
+        </a>
+        <p class="footer-desc" data-i18n="footer.desc">Otomotiv mekanik tasarım mühendisliği ve modern yazılım çözümleri kişisel vitrini.</p>
+      </div>
+
+      <ul class="footer-nav">
+        <li><a href="index.html" data-i18n="nav.home">Ana Sayfa</a></li>
+        <li><a href="skills.html" data-i18n="nav.skills">Yetenekler</a></li>
+        <li><a href="experience.html" data-i18n="nav.experience">Deneyim</a></li>
+        <li><a href="projects.html" data-i18n="nav.projects">Projeler</a></li>
+        <li><a href="about.html" data-i18n="nav.about">Hakkımda</a></li>
+        <li><a href="contact.html" data-i18n="nav.contact">İletişim</a></li>
+      </ul>
+
+      <div class="footer-bottom">
+        <p class="copyright">
+          &copy; <span id="current-year">2026</span> <span data-i18n="footer.copyright">Halil Göktaş. Tüm hakları saklıdır.</span>
+        </p>
+        <p class="credits" data-i18n="footer.credits">Mühendislik disiplini ve modern web standartları ile geliştirildi.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button id="back-to-top" class="back-to-top" aria-label="Yukarı Çık" title="Yukarı Çık">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+  </button>
+
+  <script src="main.js"></script>
+</body>
+</html>

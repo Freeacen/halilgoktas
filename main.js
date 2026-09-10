@@ -15,6 +15,8 @@ const TRANSLATIONS = {
       skills: "Yetenekler & Uzmanlıklar | Halil Göktaş",
       experience: "Deneyim & Eğitim | Halil Göktaş",
       projects: "Projeler & Vitrin | Halil Göktaş",
+      projectShock: "Amortisör CAD Montajı | Halil Göktaş",
+      projectEngine: "Motor Bloğunda Yağlama Kanalları Kesiti | Halil Göktaş",
       contact: "İletişim | Halil Göktaş"
     },
     meta: {
@@ -30,7 +32,7 @@ const TRANSLATIONS = {
       contactBtn: "İletişime Geç"
     },
     hero: {
-      badge: "Yeni Projeler & İş Birlikleri İçin Müsait",
+      badge: "Mühendislik İş Fırsatlarına Açık",
       greeting: "Merhaba, Ben",
       name: "Halil Göktaş",
       typewriterPrefix: "Ben bir",
@@ -40,7 +42,7 @@ const TRANSLATIONS = {
         "Bağımsız Geliştiriciyim",
         "Mobil & Web Geliştiricisiyim"
       ],
-      desc: "Otomotiv tasarımı ve mühendislik disiplinini modern yazılım vizyonuyla birleştiriyorum. Mekanik sistemler, CAD parça modelleme ve yenilikçi Flutter mobil / web çözümleri üretiyorum.",
+      desc: "Otomotiv mühendisiyim. Gerçek parçaların ölçümünden CATIA ortamında parça modelleme ve montaja uzanan projeler üzerinde çalıştım. Mühendislik alanında iş fırsatlarını değerlendiriyor, ayrıca Flutter ile mobil uygulamalar geliştiriyorum.",
       viewProjects: "Projelerimi Gör",
       contactBtn: "İletişime Geç",
       cvBtn: "CV İndir (PDF)",
@@ -48,8 +50,11 @@ const TRANSLATIONS = {
       linksLabel: "Bağlantılar:",
       badgeCad: "⚙️ CAD & Otomotiv",
       badgeDev: "📱 Bağımsız Geliştirici",
-      codeProfession: '"Otomotiv & Tasarım Mühendisi"',
-      codePassion: '"Mobil & Web Yazılım"',
+      codeTitle: '"Otomotiv Mühendisi"',
+      codeFocus: '"CAD modelleme ve montaj"',
+      codeTool: '"CATIA V5"',
+      codeApproach: '"Gerçek parçadan CAD modeline"',
+      codeComment: "// Mühendislik iş fırsatlarına açık",
       stat1Number: "10+",
       stat1Text: "Teknoloji & Araç",
       stat2Number: "3D",
@@ -226,6 +231,8 @@ const TRANSLATIONS = {
       skills: "Skills & Expertise | Halil Göktaş",
       experience: "Experience & Education | Halil Göktaş",
       projects: "Projects & Showcase | Halil Göktaş",
+      projectShock: "Shock Absorber CAD Assembly | Halil Göktaş",
+      projectEngine: "Engine Block Oil Passages Section | Halil Göktaş",
       contact: "Contact | Halil Göktaş"
     },
     meta: {
@@ -241,17 +248,17 @@ const TRANSLATIONS = {
       contactBtn: "Contact Me"
     },
     hero: {
-      badge: "Available for New Projects & Opportunities",
+      badge: "Open to Engineering Opportunities",
       greeting: "Hello, I am",
       name: "Halil Göktaş",
       typewriterPrefix: "I am",
       roles: [
-        "a Design Engineer (CATIA)",
         "an Automotive Engineer",
+        "a Design Engineer (CATIA)",
         "an Indie Developer",
         "a Mobile & Web Developer"
       ],
-      desc: "Combining automotive design and engineering discipline with modern software development vision. Building CAD models, mechanical systems, and innovative Flutter mobile/web solutions.",
+      desc: "I am an automotive engineer with project experience in measuring physical components and creating CATIA part and assembly models. I am seeking engineering opportunities and also develop mobile applications with Flutter.",
       viewProjects: "View Projects",
       contactBtn: "Get in Touch",
       cvBtn: "Download CV (PDF)",
@@ -259,8 +266,11 @@ const TRANSLATIONS = {
       linksLabel: "Connect:",
       badgeCad: "⚙️ CAD & Automotive",
       badgeDev: "📱 Indie Developer",
-      codeProfession: '"Automotive & Design Engineer"',
-      codePassion: '"Mobile & Web Development"',
+      codeTitle: '"Automotive Engineer"',
+      codeFocus: '"CAD part and assembly modeling"',
+      codeTool: '"CATIA V5"',
+      codeApproach: '"Physical component to CAD model"',
+      codeComment: "// Open to engineering opportunities",
       stat1Number: "10+",
       stat1Text: "Tech & Tools",
       stat2Number: "3D",
@@ -438,24 +448,25 @@ TRANSLATIONS.tr.work = {
   "subtitle": "Gerçek parçalarla yürüttüğüm modelleme ve inceleme çalışmaları; her projedeki sorumluluğum ve ortaya çıkan sonuç.",
   "homeTitle": "Seçili mühendislik çalışmaları",
   "homeSubtitle": "Ölçüsünü aldığım bir amortisörün CAD modeli ve yağlama kanallarını görünür kılan motor bloğu kesiti.",
-  "shockTitle": "Amortisör ölçümü ve CAD montajı",
-  "shockType": "Bireysel dönem projesi",
-  "shockSummary": "Sanayiden temin ettiğim amortisörün ölçülerini alarak parçalarını CATIA ortamında modelledim ve montajını oluşturdum.",
+  "shockTitle": "Gerçek parçadan amortisör modelleme ve montaj",
+  "shockType": "Bireysel dönem projesi · CATIA V5",
+  "shockSummary": "Temin ettiğim gerçek bir amortisörü ölçerek parçalarını CATIA ortamında modelledim ve montajını oluşturdum. Çalışmayı amortisörün işlevini ve çalışma prensibini açıklayan bir raporla destekledim.",
   "shockDetail": "Taşıt Teknolojisi dersi kapsamında yürüttüğüm çalışmanın ölçüm, parça modelleme, montaj ve raporlama aşamalarını tek başıma tamamladım. Raporda amortisörün görevini ve çalışma prensibini de ele aldım.",
   "shockResult": "Sonuç: Gerçek parçadan alınan ölçülere dayalı CAD parça modelleri, montaj modeli ve çalışma prensibini açıklayan rapor.",
   "shockAlt": "Ölçüleri alınarak CATIA ortamında modellenen amortisör montajı",
   "treeAlt": "Amortisör montajının parçalarını ve montaj kısıtlarını gösteren CATIA ürün ağacı",
   "treeCaption": "Parçalar ve montaj kısıtlarıyla birlikte ürün ağacı.",
-  "engineTitle": "Motor bloğunda yağlama kanallarının incelenmesi",
-  "engineType": "Bitirme projesi · 2 kişilik çalışma",
-  "engineSummary": "Motorun içindeki yağlama yollarını göstermek amacıyla temin ettiğim motor bloğunun kesim sürecini organize ederek yağlama kanallarını açığa çıkardım.",
+  "engineTitle": "Motor bloğunda yağlama kanallarının görünür hâle getirilmesi",
+  "engineType": "Bitirme projesi · İki kişilik ekip · 2021",
+  "engineSummary": "Renault Toros motor bloğunun kesilmesiyle yağlama kanallarını görünür hâle getiren bir bitirme projesinde çalıştım. Motor bloğunun teminini ve kesim sürecinin organizasyonunu üstlendim.",
   "engineDetail": "Motor bloğunun teminini, kesimi yapacak atölyenin bulunmasını ve kesim işleminin yaptırılmasını üstlendim. Raporun hazırlanmasına ve gözden geçirilmesine katkı sağladım. Proje arkadaşım rapor hazırlığına ve bütçeye destek verdi.",
   "engineResult": "Sonuç: Motor içindeki yağlama kanallarını doğrudan gözlemlemeye ve yağlama sistemini anlatmaya yönelik fiziksel bir kesit örneği.",
   "engineAlt": "Yağlama kanallarını açığa çıkarmak amacıyla kesilmiş motor bloğunun atölye fotoğrafı",
   "engineCaption": "Kesim sonrası motor bloğu; yağlama kanallarını incelemek için hazırlanan fiziksel örnek.",
   "details": "Süreç ve katkım",
   "openImage": "Görseli tam boyutta aç",
-  "viewWork": "Çalışmayı incele",
+  "viewWork": "Projeyi İncele",
+  "viewProject": "Projeyi İncele",
   "otherTitle": "Diğer çalışmalar",
   "gearTitle": "Şanzıman muhafazası modelleme",
   "gearType": "6 kişilik ekip projesi · CATIA V5",
@@ -469,29 +480,31 @@ TRANSLATIONS.tr.work = {
   "formNote": "Bu form e-posta uygulamanızda bir taslak açar; gönderimi oradan tamamlayın. E-posta uygulamanız açılmazsa adresimi kopyalayarak mesajınızı gönderebilirsiniz.",
   "draftOpened": "E-posta uygulamanız açıldıysa gönderimi oradan tamamlayın. Mesajınız bu sayfadan gönderilmedi."
 };
+
 TRANSLATIONS.en.work = {
   "title": "Projects & Work",
   "subtitle": "Modeling and inspection projects based on real components, with my responsibilities and the outcome of each study.",
   "homeTitle": "Selected engineering work",
   "homeSubtitle": "A CAD assembly measured from a real shock absorber, and an engine block section that reveals its oil passages.",
   "shockTitle": "Shock absorber measurement and CAD assembly",
-  "shockType": "Individual semester project",
-  "shockSummary": "I sourced a shock absorber from an automotive workshop, measured its components, modeled them in CATIA and created the assembly.",
+  "shockType": "Individual semester project · CATIA V5",
+  "shockSummary": "I measured a physical shock absorber, modeled its components in CATIA and created the assembly. I supported the project with a report explaining the component's function and operating principle.",
   "shockDetail": "I completed the measurement, part modeling, assembly and report independently as a Vehicle Technology course project. The report also explained the purpose and operating principle of the shock absorber.",
   "shockResult": "Outcome: CAD part models and an assembly based on measurements of a real component, together with a report on its operation.",
   "shockAlt": "CATIA shock absorber assembly modeled from measurements of a real component",
   "treeAlt": "CATIA product tree showing the shock absorber components and assembly constraints",
   "treeCaption": "Product tree showing individual components and assembly constraints.",
-  "engineTitle": "Investigating oil passages in an engine block",
-  "engineType": "Graduation project · Team of two",
-  "engineSummary": "I sourced an engine block and organized its sectioning to expose the oil passages and demonstrate the lubrication paths inside the engine.",
+  "engineTitle": "Exposing oil passages in an engine block",
+  "engineType": "Graduation project · Team of two · 2021",
+  "engineSummary": "I worked on a graduation project that exposed the oil passages in a Renault Toros engine block through sectioning. I sourced the block and coordinated the cutting process.",
   "engineDetail": "I sourced the engine block, found a workshop and coordinated the cutting work. I also contributed to preparing and reviewing the report. My project partner supported report preparation and the project budget.",
   "engineResult": "Outcome: A physical engine block section for observing oil passages and explaining the lubrication system.",
   "engineAlt": "Workshop photograph of an engine block sectioned to expose its oil passages",
   "engineCaption": "The engine block after sectioning, prepared as a physical example for examining oil passages.",
   "details": "Process and my contribution",
   "openImage": "Open full-size image",
-  "viewWork": "Explore this project",
+  "viewWork": "View Project",
+  "viewProject": "View Project",
   "otherTitle": "Other work",
   "gearTitle": "Transmission housing modeling",
   "gearType": "Team of six · CATIA V5",
@@ -504,6 +517,86 @@ TRANSLATIONS.en.work = {
   "more": "All projects",
   "formNote": "This form opens a draft in your email app; complete sending there. If no email app opens, copy my address and send your message from your preferred email service.",
   "draftOpened": "If your email app opened, complete sending there. Your message was not sent from this page."
+};
+
+// Amortisör Detay Sayfası
+TRANSLATIONS.tr.projectShock = {
+  "badge": "Bireysel dönem projesi · CATIA V5",
+  "title": "Gerçek parçadan amortisör modelleme ve montaj",
+  "subtitle": "Gerçek bir otomotiv amortisörünün ölçülerek CATIA ortamında modellenmesi ve montaj ilişkilerinin kurulması.",
+  "backBtn": "Tüm Projelere Dön",
+  "objHeading": "Amaç",
+  "objDesc": "Gerçek bir otomotiv parçasını ölçerek dijital modele aktarmak ve parçaların montaj içindeki ilişkilerini CATIA ortamında kurmak.",
+  "procHeading": "Süreç ve Katkım",
+  "procDesc": "Sanayiden temin ettiğim amortisör üzerinde ölçüm yaptım, parçalarını modelledim ve montajı oluşturdum. Ölçüm, modelleme, montaj ve rapor hazırlığı aşamalarını bireysel olarak yürüttüm. Rapor çalışmasında amortisörün işlevi ve çalışma prensibinin yanı sıra malzeme bilgilerini araştırdım.",
+  "outHeading": "Çıktı",
+  "outDesc": "Gerçek parçadan alınan ölçülere dayanan CAD parça modelleri, montaj modeli ve çalışma prensibini açıklayan rapor çalışması.",
+  "cadAlt": "Gerçek parçadan alınan ölçülerle oluşturduğum CATIA amortisör montajı.",
+  "cadCaption": "Gerçek parçadan alınan ölçülerle oluşturulan CATIA amortisör montajı.",
+  "treeAlt": "Amortisör montajının parçalarını ve montaj kısıtlarını gösteren CATIA ürün ağacı.",
+  "treeCaption": "Parçaları ve montaj kısıtlarıyla birlikte ürün ağacı.",
+  "openImage": "Görseli tam boyutta aç",
+  "nextProject": "Sonraki Proje: Motor Bloğu Kesiti"
+};
+
+TRANSLATIONS.en.projectShock = {
+  "badge": "Individual semester project · CATIA V5",
+  "title": "Shock absorber measurement and CAD assembly",
+  "subtitle": "Measuring a physical automotive shock absorber and establishing part and assembly relationships in CATIA.",
+  "backBtn": "All Projects",
+  "objHeading": "Objective",
+  "objDesc": "To translate a physical automotive component into CAD models through measurement and establish the relationships between its parts in a CATIA assembly.",
+  "procHeading": "Process and My Contribution",
+  "procDesc": "I sourced a shock absorber from an automotive workshop, measured it, modeled its components and created the assembly. I completed the measurement, modeling, assembly and report independently. The report covered the component's function and operating principle, alongside background research on materials.",
+  "outHeading": "Outcome",
+  "outDesc": "CAD part and assembly models based on measurements of a physical component, supported by a report on its operation.",
+  "cadAlt": "CATIA shock absorber assembly created from measurements of a physical component.",
+  "cadCaption": "CATIA shock absorber assembly created from measurements of a physical component.",
+  "treeAlt": "CATIA product tree showing components and assembly constraints.",
+  "treeCaption": "CATIA product tree showing components and assembly constraints.",
+  "openImage": "Open full-size image",
+  "nextProject": "Next Project: Engine Block Section"
+};
+
+// Motor Bloğu Detay Sayfası
+TRANSLATIONS.tr.projectEngine = {
+  "badge": "Bitirme projesi · İki kişilik ekip · 2021",
+  "meta": "Afyon Kocatepe Üniversitesi · Otomotiv Mühendisliği · 2021",
+  "title": "Motor bloğunda yağlama kanallarının görünür hâle getirilmesi",
+  "subtitle": "Renault Toros motor bloğunun kesilmesiyle yağlama kanallarının incelenmesi ve motor yağlama sisteminin fiziksel örnek üzerinden anlatımı.",
+  "backBtn": "Tüm Projelere Dön",
+  "objHeading": "Amaç",
+  "objDesc": "Motor içindeki yağlama yollarını fiziksel bir örnek üzerinde göstermek amacıyla Renault Toros motor bloğundaki yağ kanallarını kesit alarak görünür hâle getirmek.",
+  "procHeading": "Süreç ve Katkım",
+  "procDesc": "Motor bloğunu temin ettim, kesimi gerçekleştirecek işletmeyi buldum ve kesim sürecini organize ettim. Raporu gözden geçirerek hazırlanmasına katkı sağladım. İki kişilik projede, proje ortağım rapor hazırlığına ve bütçeye katkıda bulundu.",
+  "scopeHeading": "Teknik Kapsam",
+  "scopeDesc": "Çalışmada yağlama sisteminin bileşenleri ve görevleri ele alındı. Kesilmiş motor bloğu, raporda açıklanan yağ kanallarını fiziksel bir örnek üzerinden incelemek ve anlatmak için kullanıldı.",
+  "outHeading": "Çıktı",
+  "outDesc": "Yağlama kanalları görünür hâle getirilmiş bir motor bloğu ve motor yağlama sistemini açıklayan ortak bitirme raporu.",
+  "photoAlt": "Yağlama kanallarını açığa çıkarmak amacıyla kesilmiş motor bloğunun atölye fotoğrafı.",
+  "photoCaption": "Yağlama kanallarını göstermek amacıyla kesilmiş Renault Toros motor bloğu. Bitirme raporu, Şekil 7.1.",
+  "openImage": "Görseli tam boyutta aç",
+  "prevProject": "Önceki Proje: Amortisör CAD Montajı"
+};
+
+TRANSLATIONS.en.projectEngine = {
+  "badge": "Graduation project · Team of two · 2021",
+  "meta": "Afyon Kocatepe University · Automotive Engineering · 2021",
+  "title": "Exposing oil passages in an engine block",
+  "subtitle": "Exposing oil passages in a Renault Toros engine block through sectioning to explain the engine lubrication system using a physical example.",
+  "backBtn": "All Projects",
+  "objHeading": "Objective",
+  "objDesc": "To expose the oil passages in a Renault Toros engine block through sectioning and use the physical example to explain lubrication paths inside the engine.",
+  "procHeading": "Process and My Contribution",
+  "procDesc": "I sourced the engine block, found a workshop to carry out the cutting and coordinated the sectioning process. I reviewed and contributed to the report. This was a two-person project; my teammate contributed to report preparation and the project budget.",
+  "scopeHeading": "Technical Scope",
+  "scopeDesc": "The study covered the components and functions of an engine lubrication system. The sectioned block provided a physical example for examining and explaining the oil passages discussed in the report.",
+  "outHeading": "Outcome",
+  "outDesc": "A sectioned engine block with exposed oil passages and a jointly authored graduation report explaining the engine lubrication system.",
+  "photoAlt": "Workshop photograph of an engine block sectioned to expose its oil passages.",
+  "photoCaption": "Renault Toros engine block sectioned to expose its oil passages. Graduation report, Figure 7.1.",
+  "openImage": "Open full-size image",
+  "prevProject": "Previous Project: Shock Absorber CAD Assembly"
 };
 
 // Mühendislik Yaklaşımı & Vizyon Özeti (Ana Sayfa İçeriği)
@@ -611,6 +704,8 @@ function setLanguage(lang) {
   if (currentPath.includes("about")) pageKey = "about";
   else if (currentPath.includes("skills")) pageKey = "skills";
   else if (currentPath.includes("experience")) pageKey = "experience";
+  else if (currentPath.includes("project-shock")) pageKey = "projectShock";
+  else if (currentPath.includes("project-engine")) pageKey = "projectEngine";
   else if (currentPath.includes("projects")) pageKey = "projects";
   else if (currentPath.includes("contact")) pageKey = "contact";
 
@@ -619,7 +714,10 @@ function setLanguage(lang) {
   }
   const metaDesc = document.querySelector('meta[name="description"]');
   if (metaDesc && t.meta && t.meta.desc) {
-    metaDesc.setAttribute("content", pageKey === "projects" ? t.work.subtitle : t.meta.desc);
+    if (pageKey === "projects") metaDesc.setAttribute("content", t.work.subtitle);
+    else if (pageKey === "projectShock") metaDesc.setAttribute("content", t.projectShock.subtitle);
+    else if (pageKey === "projectEngine") metaDesc.setAttribute("content", t.projectEngine.subtitle);
+    else metaDesc.setAttribute("content", t.meta.desc);
   }
 
   // Dil Rozetleri
