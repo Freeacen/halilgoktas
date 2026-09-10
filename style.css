@@ -2201,6 +2201,112 @@ button, input, textarea {
 .text-project { padding: 24px; border-radius: var(--radius-lg); }
 .text-project .project-meta { font-size: .875rem; margin-bottom: 12px; }
 .featured-footer { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; margin-top: 32px; }
+
+/* Engineering Vision & Core Pillars Grid */
+.vision-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.vision-card {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: var(--radius-lg);
+  position: relative;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal), border-color var(--transition-normal);
+}
+
+.vision-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-highlight);
+  box-shadow: var(--shadow-md), 0 0 24px rgba(var(--color-primary-rgb), 0.16);
+}
+
+.vision-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.vision-card-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background: rgba(var(--color-primary-rgb), 0.12);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.45rem;
+  flex-shrink: 0;
+}
+
+.vision-tag {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  background: rgba(var(--color-primary-rgb), 0.08);
+  border: 1px solid rgba(var(--color-primary-rgb), 0.22);
+  border-radius: var(--radius-full);
+  padding: 4px 10px;
+  font-family: var(--font-mono);
+  letter-spacing: 0.02em;
+}
+
+.vision-card-title {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  line-height: 1.35;
+  color: var(--text-primary);
+}
+
+.vision-card-desc {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  margin-bottom: 24px;
+  flex-grow: 1;
+}
+
+.vision-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  transition: gap var(--transition-fast), color var(--transition-fast);
+  text-decoration: none;
+}
+
+.vision-card:hover .vision-card-link {
+  gap: 12px;
+  color: #38bdf8;
+}
+
+.vision-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 40px;
+}
+
+@media (max-width: 960px) {
+  .vision-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
 .form-note { font-size: .95rem; color: var(--text-secondary); margin-bottom: 24px; }
 .nav-container { gap: 16px; }
 .nav-actions { flex-shrink: 0; }

@@ -203,22 +203,72 @@
       </div>
     </section>
 
-    <section class="section section-alt">
+    <!-- Mühendislik Yaklaşımı & Vizyon Bölümü -->
+    <section class="section section-alt" id="engineering-vision">
       <div class="container">
         <div class="section-header text-center">
-          <h2 class="section-title" data-i18n="work.homeTitle">Seçili mühendislik çalışmaları</h2>
-          <p class="section-subtitle" data-i18n="work.homeSubtitle">Ölçüsünü aldığım bir amortisörün CAD modeli ve yağlama kanallarını görünür kılan motor bloğu kesiti.</p>
+          <span class="section-badge" data-i18n="vision.badge">Mühendislik Yaklaşımı</span>
+          <h2 class="section-title" data-i18n="vision.title">Ölçümden Modele, Tasarımdan Koda</h2>
+          <p class="section-subtitle" data-i18n="vision.subtitle">Otomotiv mühendisliği titizliğini modern yazılım vizyonuyla birleştiren çalışma felsefem ve temel odak alanlarım.</p>
         </div>
-        <div class="featured-projects"><article class="project-card glass-card real-project" id="featured-shock">
- <div class="project-photo cad-photo"><img src="assets/projects/amortisor-cad.png" width="812" height="813" alt="Ölçüleri alınarak CATIA ortamında modellenen amortisör montajı" data-i18n-alt="work.shockAlt" loading="lazy" decoding="async" /></div>
- <div class="project-content"><p class="project-meta" data-i18n="work.shockType">Bireysel dönem projesi</p>
- <h3 class="project-title" data-i18n="work.shockTitle">Amortisör ölçümü ve CAD montajı</h3><p class="project-summary" data-i18n="work.shockSummary">Sanayiden temin ettiğim amortisörün ölçülerini alarak parçalarını CATIA ortamında modelledim ve montajını oluşturdum.</p>
- <a class="btn btn-outline" href="projects.html#shock"><span  data-i18n="work.viewWork">Çalışmayı incele</span></a></div></article><article class="project-card glass-card real-project" id="featured-engine">
- <div class="project-photo engine-photo"><img src="assets/projects/motor-blogu-kesit.jpg" width="5312" height="2988" alt="Yağlama kanallarını açığa çıkarmak amacıyla kesilmiş motor bloğunun atölye fotoğrafı" data-i18n-alt="work.engineAlt" loading="lazy" decoding="async" /></div>
- <div class="project-content"><p class="project-meta" data-i18n="work.engineType">Bitirme projesi · 2 kişilik çalışma</p>
- <h3 class="project-title" data-i18n="work.engineTitle">Motor bloğunda yağlama kanallarının incelenmesi</h3><p class="project-summary" data-i18n="work.engineSummary">Motorun içindeki yağlama yollarını göstermek amacıyla temin ettiğim motor bloğunun kesim sürecini organize ederek yağlama kanallarını açığa çıkardım.</p>
- <a class="btn btn-outline" href="projects.html#engine"><span  data-i18n="work.viewWork">Çalışmayı incele</span></a></div></article></div>
-        <div class="featured-footer"><a class="btn btn-primary" href="projects.html"><span  data-i18n="work.more">Tüm projeler</span></a><a class="btn btn-outline" href="experience.html" data-i18n="homeExplore.cardExpBtn">Kariyer Çizelgesi</a></div>
+
+        <div class="vision-grid">
+          <!-- 1. CAD & Parça Hassasiyeti -->
+          <article class="vision-card glass-card">
+            <div class="vision-card-top">
+              <div class="vision-card-icon">📐</div>
+              <span class="vision-tag" data-i18n="vision.card1Tag">CATIA V5 · Parametrik</span>
+            </div>
+            <h3 class="vision-card-title" data-i18n="vision.card1Title">CAD &amp; Parça Hassasiyeti</h3>
+            <p class="vision-card-desc" data-i18n="vision.card1Desc">Atölye ve sanayi ortamında kumpas ve mikrometre ile fiziksel ölçüm; CATIA V5'te hassas parça modelleme, yüzey işleme ve ürün ağacı montaj ilişkileri.</p>
+            <a href="projects.html#shock" class="vision-card-link">
+              <span data-i18n="vision.card1Btn">Amortisör CAD İncele</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </article>
+
+          <!-- 2. İmalat & Fiziksel İnceleme -->
+          <article class="vision-card glass-card">
+            <div class="vision-card-top">
+              <div class="vision-card-icon">⚙️</div>
+              <span class="vision-tag" data-i18n="vision.card2Tag">İmalat &amp; 3D Baskı</span>
+            </div>
+            <h3 class="vision-card-title" data-i18n="vision.card2Title">İmalat &amp; Fiziksel İnceleme</h3>
+            <p class="vision-card-desc" data-i18n="vision.card2Desc">Motor bloğu kesim süreçleri, yağlama kanallarının doğrudan analizi, talaşlı imalat yöntemleri ve PLA malzeme ile fonksiyonel 3D baskı prototipleri.</p>
+            <a href="projects.html#engine" class="vision-card-link">
+              <span data-i18n="vision.card2Btn">Motor Bloğu Kesitini Gör</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </article>
+
+          <!-- 3. Bağımsız Yazılım & Dijital Ürünler -->
+          <article class="vision-card glass-card">
+            <div class="vision-card-top">
+              <div class="vision-card-icon">📱</div>
+              <span class="vision-tag" data-i18n="vision.card3Tag">Flutter &amp; Web Mimarisi</span>
+            </div>
+            <h3 class="vision-card-title" data-i18n="vision.card3Title">Yazılım &amp; Bağımsız Geliştirme</h3>
+            <p class="vision-card-desc" data-i18n="vision.card3Desc">Mühendislik analitiğini dijital dünyaya taşıyan Flutter &amp; Dart mobil uygulamaları, veritabanı şemaları, temiz mimari ve modern web arayüzleri.</p>
+            <a href="skills.html" class="vision-card-link">
+              <span data-i18n="vision.card3Btn">Yazılım Yeteneklerini Gör</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </article>
+        </div>
+
+        <!-- Alt Eylem Butonları -->
+        <div class="vision-footer">
+          <a class="btn btn-primary" href="projects.html">
+            <span data-i18n="vision.viewAllProjects">Tüm Projeleri İncele</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+          <a class="btn btn-outline" href="experience.html">
+            <span data-i18n="vision.viewExperience">Kariyer Çizelgesi</span>
+          </a>
+          <a class="btn btn-outline" href="contact.html">
+            <span data-i18n="vision.viewContact">İletişime Geç</span>
+          </a>
+        </div>
       </div>
     </section>
   </main>

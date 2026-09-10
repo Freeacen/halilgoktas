@@ -506,6 +506,49 @@ TRANSLATIONS.en.work = {
   "draftOpened": "If your email app opened, complete sending there. Your message was not sent from this page."
 };
 
+// Mühendislik Yaklaşımı & Vizyon Özeti (Ana Sayfa İçeriği)
+TRANSLATIONS.tr.vision = {
+  badge: "Mühendislik Yaklaşımı",
+  title: "Ölçümden Modele, Tasarımdan Koda",
+  subtitle: "Otomotiv mühendisliği titizliğini modern yazılım vizyonuyla birleştiren çalışma felsefem ve temel odak alanlarım.",
+  card1Tag: "CATIA V5 · Parametrik",
+  card1Title: "CAD & Parça Hassasiyeti",
+  card1Desc: "Atölye ve sanayi ortamında kumpas ve mikrometre ile fiziksel ölçüm; CATIA V5'te hassas parça modelleme, yüzey işleme ve ürün ağacı montaj ilişkileri.",
+  card1Btn: "Amortisör CAD İncele",
+  card2Tag: "İmalat & 3D Baskı",
+  card2Title: "İmalat & Fiziksel İnceleme",
+  card2Desc: "Motor bloğu kesim süreçleri, yağlama kanallarının doğrudan analizi, talaşlı imalat yöntemleri ve PLA malzeme ile fonksiyonel 3D baskı prototipleri.",
+  card2Btn: "Motor Bloğu Kesitini Gör",
+  card3Tag: "Flutter & Web Mimarisi",
+  card3Title: "Yazılım & Bağımsız Geliştirme",
+  card3Desc: "Mühendislik analitiğini dijital dünyaya taşıyan Flutter & Dart mobil uygulamaları, veritabanı şemaları, temiz mimari ve modern web arayüzleri.",
+  card3Btn: "Yazılım Yeteneklerini Gör",
+  viewAllProjects: "Tüm Projeleri İncele",
+  viewExperience: "Kariyer Çizelgesi",
+  viewContact: "İletişime Geç"
+};
+
+TRANSLATIONS.en.vision = {
+  badge: "Engineering Approach",
+  title: "From Measurement to Model, From Design to Code",
+  subtitle: "My working principles and focus areas bridging automotive engineering rigor with modern software craft.",
+  card1Tag: "CATIA V5 · Parametric",
+  card1Title: "CAD & Dimensional Precision",
+  card1Desc: "Physical measurements with calipers and micrometers in workshop settings; high-precision part modeling, surface drafting, and product tree assembly in CATIA V5.",
+  card1Btn: "Explore Shock CAD",
+  card2Tag: "Manufacturing & 3D Print",
+  card2Title: "Manufacturing & Physical Inspection",
+  card2Desc: "Engine block sectioning, direct inspection of oil lubrication passages, machining methods, and functional 3D-printed PLA prototyping.",
+  card2Btn: "View Engine Section",
+  card3Tag: "Flutter & Web Architecture",
+  card3Title: "Software & Indie Development",
+  card3Desc: "Bringing engineering problem-solving to digital products: mobile apps built with Flutter & Dart, relational schemas, clean code, and modern web architectures.",
+  card3Btn: "View Software Skills",
+  viewAllProjects: "All Engineering Projects",
+  viewExperience: "Career Timeline",
+  viewContact: "Get in Touch"
+};
+
 let currentLang = "tr";
 let typewriterTimeout = null;
 
