@@ -66,7 +66,7 @@
         <a href="contact.html" class="btn btn-primary btn-sm hide-mobile" id="nav-contact-btn" data-i18n="nav.contactBtn">İletişime Geç</a>
 
         <!-- Mobil Menü Butonu -->
-        <button id="mobile-toggle" class="icon-btn mobile-toggle" aria-label="Menüyü Aç/Kapat">
+        <button id="mobile-toggle" aria-controls="nav-menu" aria-expanded="false" class="icon-btn mobile-toggle" aria-label="Menüyü Aç/Kapat">
           <svg class="menu-open-icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
           <svg class="menu-close-icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
         </button>
@@ -84,7 +84,7 @@
         <div class="hero-content">
           <div class="badge-pill">
             <span class="status-dot"></span>
-            <span id="hero-badge-text" data-i18n="hero.badge">Yeni Projeler & İş Birlikleri İçin Müsait</span>
+            <span id="hero-badge-text" data-i18n="hero.badge">Yeni Projeler &amp; İş Birlikleri İçin Müsait</span>
           </div>
 
           <h1 class="hero-title">
@@ -99,9 +99,7 @@
             <span class="typewriter-cursor">|</span>
           </div>
 
-          <p class="hero-description" data-i18n="hero.desc">
-            Otomotiv tasarımı ve mühendislik disiplinini modern yazılım vizyonuyla birleştiriyorum. Mekanik sistemler, CAD parça modelleme ve yenilikçi Flutter mobil / web çözümleri üretiyorum.
-          </p>
+          <p class="hero-description" data-i18n="hero.desc">Otomotiv tasarımı ve mühendislik disiplinini modern yazılım vizyonuyla birleştiriyorum. Mekanik sistemler, CAD parça modelleme ve yenilikçi Flutter mobil / web çözümleri üretiyorum.</p>
 
           <!-- Eylem Butonları -->
           <div class="hero-cta-group">
@@ -164,7 +162,7 @@
                 </picture>
               </div>
               <div class="floating-badge badge-code">
-                <span data-i18n="hero.badgeCad">⚙️ CAD & Otomotiv</span>
+                <span data-i18n="hero.badgeCad">⚙️ CAD &amp; Otomotiv</span>
               </div>
               <div class="floating-badge badge-tech">
                 <span data-i18n="hero.badgeDev">📱 Bağımsız Geliştirici</span>
@@ -175,8 +173,8 @@
             <div class="profile-code-snippet">
               <pre><code><span class="code-kw">const</span> engineer = {
   name: <span class="code-str">"Halil Göktaş"</span>,
-  profession: <span class="code-str" data-i18n="hero.codeProfession">"Otomotiv & Tasarım Mühendisi"</span>,
-  passion: <span class="code-str" data-i18n="hero.codePassion">"Mobil & Web Yazılım"</span>,
+  profession: <span class="code-str" data-i18n="hero.codeProfession">"Otomotiv &amp; Tasarım Mühendisi"</span>,
+  passion: <span class="code-str" data-i18n="hero.codePassion">"Mobil &amp; Web Yazılım"</span>,
   openToWork: <span class="code-bool">true</span>
 };</code></pre>
             </div>
@@ -185,7 +183,7 @@
             <div class="profile-stats-row">
               <div class="stat-item">
                 <span class="stat-number" data-i18n="hero.stat1Number">10+</span>
-                <span class="stat-desc" data-i18n="hero.stat1Text">Teknoloji & Araç</span>
+                <span class="stat-desc" data-i18n="hero.stat1Text">Teknoloji &amp; Araç</span>
               </div>
               <div class="stat-divider"></div>
               <div class="stat-item">
@@ -194,8 +192,8 @@
               </div>
               <div class="stat-divider"></div>
               <div class="stat-item">
-                <span class="stat-number" data-i18n="hero.stat3Number">%100</span>
-                <span class="stat-desc" data-i18n="hero.stat3Text">Mühendislik Titizliği</span>
+                <span class="stat-number" data-i18n="hero.stat3Number">CAD</span>
+                <span class="stat-desc" data-i18n="hero.stat3Text">Ölçümden Modele</span>
               </div>
             </div>
 
@@ -205,93 +203,22 @@
       </div>
     </section>
 
-    <!-- Sayfaları Keşfet Bölümü (Multi-Page Navigation Grid) -->
     <section class="section section-alt">
       <div class="container">
         <div class="section-header text-center">
-          <span class="section-badge" data-i18n="homeExplore.badge">Keşfedin</span>
-          <h2 class="section-title" data-i18n="homeExplore.title">Sayfalar ve Bölümler</h2>
-          <p class="section-subtitle" data-i18n="homeExplore.subtitle">
-            Mühendislik geçmişim, yetkinliklerim, kariyer yolculuğum ve projelerim hakkında detaylı bilgi edinin.
-          </p>
+          <h2 class="section-title" data-i18n="work.homeTitle">Seçili mühendislik çalışmaları</h2>
+          <p class="section-subtitle" data-i18n="work.homeSubtitle">Ölçüsünü aldığım bir amortisörün CAD modeli ve yağlama kanallarını görünür kılan motor bloğu kesiti.</p>
         </div>
-
-        <div class="explore-grid">
-          <!-- 1. Yetenekler Kartı -->
-          <div class="explore-card glass-card">
-            <div>
-              <div class="explore-card-icon">⚙️</div>
-              <h3 class="explore-card-title" data-i18n="homeExplore.cardSkillsTitle">Teknoloji & Yetenekler</h3>
-              <p class="explore-card-desc" data-i18n="homeExplore.cardSkillsDesc">
-                CATIA V5, SolidWorks, imalat süreçleri, Flutter, modern web dilleri ve veritabanı mimarisi.
-              </p>
-            </div>
-            <a href="skills.html" class="explore-card-btn">
-              <span data-i18n="homeExplore.cardSkillsBtn">Tüm Yetenekler</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-            </a>
-          </div>
-
-          <!-- 2. Deneyim Kartı -->
-          <div class="explore-card glass-card">
-            <div>
-              <div class="explore-card-icon">🚀</div>
-              <h3 class="explore-card-title" data-i18n="homeExplore.cardExpTitle">Deneyim & Zaman Çizelgesi</h3>
-              <p class="explore-card-desc" data-i18n="homeExplore.cardExpDesc">
-                Grebo Otomotiv ve Pimsun A.Ş. stajları, bağımsız geliştirme süreçleri ve sertifikalar.
-              </p>
-            </div>
-            <a href="experience.html" class="explore-card-btn">
-              <span data-i18n="homeExplore.cardExpBtn">Kariyer Çizelgesi</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-            </a>
-          </div>
-
-          <!-- 3. Projeler Kartı -->
-          <div class="explore-card glass-card">
-            <div>
-              <div class="explore-card-icon">📐</div>
-              <h3 class="explore-card-title" data-i18n="homeExplore.cardProjectsTitle">Projeler & Çalışmalar</h3>
-              <p class="explore-card-desc" data-i18n="homeExplore.cardProjectsDesc">
-                Şanzıman modelleme, 3D baskı imalat parçaları ve geliştirilmekte olan mobil uygulamalar.
-              </p>
-            </div>
-            <a href="projects.html" class="explore-card-btn">
-              <span data-i18n="homeExplore.cardProjectsBtn">Proje Vitrini</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-            </a>
-          </div>
-
-          <!-- 4. Hakkımda Kartı -->
-          <div class="explore-card glass-card">
-            <div>
-              <div class="explore-card-icon">👨‍💻</div>
-              <h3 class="explore-card-title" data-i18n="homeExplore.cardAboutTitle">Hakkımda & Eğitim</h3>
-              <p class="explore-card-desc" data-i18n="homeExplore.cardAboutDesc">
-                Afyon Kocatepe Üniversitesi Otomotiv Mühendisliği ve Anadolu Üniversitesi Web Tasarım mezuniyeti.
-              </p>
-            </div>
-            <a href="about.html" class="explore-card-btn">
-              <span data-i18n="homeExplore.cardAboutBtn">Biyografimi İncele</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-            </a>
-          </div>
-
-          <!-- 5. İletişim Kartı -->
-          <div class="explore-card glass-card">
-            <div>
-              <div class="explore-card-icon">📬</div>
-              <h3 class="explore-card-title" data-i18n="homeExplore.cardContactTitle">İletişim & Kanallar</h3>
-              <p class="explore-card-desc" data-i18n="homeExplore.cardContactDesc">
-                Doğrudan e-posta, telefon görüşmesi, LinkedIn ve GitHub profilleri ile mesaj formu.
-              </p>
-            </div>
-            <a href="contact.html" class="explore-card-btn">
-              <span data-i18n="homeExplore.cardContactBtn">Mesaj Gönder</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-            </a>
-          </div>
-        </div>
+        <div class="featured-projects"><article class="project-card glass-card real-project" id="featured-shock">
+ <div class="project-photo cad-photo"><img src="assets/projects/amortisor-cad.png" width="812" height="813" alt="Ölçüleri alınarak CATIA ortamında modellenen amortisör montajı" data-i18n-alt="work.shockAlt" loading="lazy" decoding="async" /></div>
+ <div class="project-content"><p class="project-meta" data-i18n="work.shockType">Bireysel dönem projesi</p>
+ <h3 class="project-title" data-i18n="work.shockTitle">Amortisör ölçümü ve CAD montajı</h3><p class="project-summary" data-i18n="work.shockSummary">Sanayiden temin ettiğim amortisörün ölçülerini alarak parçalarını CATIA ortamında modelledim ve montajını oluşturdum.</p>
+ <a class="btn btn-outline" href="projects.html#shock"><span  data-i18n="work.viewWork">Çalışmayı incele</span></a></div></article><article class="project-card glass-card real-project" id="featured-engine">
+ <div class="project-photo engine-photo"><img src="assets/projects/motor-blogu-kesit.jpg" width="5312" height="2988" alt="Yağlama kanallarını açığa çıkarmak amacıyla kesilmiş motor bloğunun atölye fotoğrafı" data-i18n-alt="work.engineAlt" loading="lazy" decoding="async" /></div>
+ <div class="project-content"><p class="project-meta" data-i18n="work.engineType">Bitirme projesi · 2 kişilik çalışma</p>
+ <h3 class="project-title" data-i18n="work.engineTitle">Motor bloğunda yağlama kanallarının incelenmesi</h3><p class="project-summary" data-i18n="work.engineSummary">Motorun içindeki yağlama yollarını göstermek amacıyla temin ettiğim motor bloğunun kesim sürecini organize ederek yağlama kanallarını açığa çıkardım.</p>
+ <a class="btn btn-outline" href="projects.html#engine"><span  data-i18n="work.viewWork">Çalışmayı incele</span></a></div></article></div>
+        <div class="featured-footer"><a class="btn btn-primary" href="projects.html"><span  data-i18n="work.more">Tüm projeler</span></a><a class="btn btn-outline" href="experience.html" data-i18n="homeExplore.cardExpBtn">Kariyer Çizelgesi</a></div>
       </div>
     </section>
   </main>
@@ -304,9 +231,7 @@
           <span class="logo-symbol">&lt;HG/&gt;</span>
           <span class="logo-text">halilgoktas</span>
         </a>
-        <p class="footer-desc" data-i18n="footer.desc">
-          Otomotiv mekanik tasarım mühendisliği ve modern yazılım çözümleri kişisel vitrini.
-        </p>
+        <p class="footer-desc" data-i18n="footer.desc">Otomotiv mekanik tasarım mühendisliği ve modern yazılım çözümleri kişisel vitrini.</p>
       </div>
 
       <ul class="footer-nav">
@@ -322,9 +247,7 @@
         <p class="copyright">
           &copy; <span id="current-year">2026</span> <span data-i18n="footer.copyright">Halil Göktaş. Tüm hakları saklıdır.</span>
         </p>
-        <p class="credits" data-i18n="footer.credits">
-          Mühendislik disiplini ve modern web standartları ile geliştirildi.
-        </p>
+        <p class="credits" data-i18n="footer.credits">Mühendislik disiplini ve modern web standartları ile geliştirildi.</p>
       </div>
     </div>
   </footer>

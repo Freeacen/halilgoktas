@@ -48,14 +48,14 @@ const TRANSLATIONS = {
       linksLabel: "Bağlantılar:",
       badgeCad: "⚙️ CAD & Otomotiv",
       badgeDev: "📱 Bağımsız Geliştirici",
-      codeProfession: "Otomotiv & Tasarım Mühendisi",
-      codePassion: "Mobil & Web Yazılım",
+      codeProfession: '"Otomotiv & Tasarım Mühendisi"',
+      codePassion: '"Mobil & Web Yazılım"',
       stat1Number: "10+",
       stat1Text: "Teknoloji & Araç",
       stat2Number: "3D",
       stat2Text: "Parametrik Modelleme",
-      stat3Number: "%100",
-      stat3Text: "Mühendislik Titizliği"
+      stat3Number: "CAD",
+      stat3Text: "Ölçümden Modele"
     },
     homeExplore: {
       badge: "Keşfedin",
@@ -122,7 +122,7 @@ const TRANSLATIONS = {
       sheetmetalDesc: "Atölye ve imalat süreçlerine (talaşlı imalat, montaj ve üretim adımları) saha hakimiyeti; tasarımdan üretime kadar karşılaşılan teknik aksaklıklara analitik ve uygulanabilir mühendislik çözümleri üretme.",
       flutterDesc: "Android ve iOS için modern, performanslı ve akıcı çapraz platform mobil uygulamalar geliştirme.",
       dartDesc: "Nesne yönelimli programlama, asenkron yapılar, durum yönetimi (State Management) ve REST API entegrasyonları.",
-      htmlCssDesc: "Responsive tasarım, CSS Grid/Flexbox, camgöbeği glassmorphism ve semantik modern web standartları.",
+      htmlCssDesc: "Responsive tasarım, CSS Grid/Flexbox, semantik HTML ve erişilebilir arayüzler.",
       phpDesc: "Dinamik web arka yüzleri, form doğrulama, oturum yönetimi ve veritabanı entegrasyonlu servisler.",
       sqlDesc: "İlişkisel veritabanı mimarisi, CRUD operasyonları, MySQL sorguları ve veri güvenliği yapılandırması.",
       gitDesc: "Git iş akışları, branch stratejileri, versiyonlama ve GitHub üzerinde açık kaynak/özel repo yönetimi.",
@@ -199,7 +199,7 @@ const TRANSLATIONS = {
       subjectPlaceholder: "Proje teklifi veya genel soru",
       messageLabel: "Mesajınız",
       messagePlaceholder: "Mesajınızı buraya yazabilirsiniz...",
-      submitBtn: "Mesajı İlet",
+      submitBtn: "E-posta Taslağı Aç",
       sendingBtn: "Gönderiliyor...",
       copyTooltip: "Kopyala",
       copiedTooltip: "Kopyalandı!"
@@ -259,14 +259,14 @@ const TRANSLATIONS = {
       linksLabel: "Connect:",
       badgeCad: "⚙️ CAD & Automotive",
       badgeDev: "📱 Indie Developer",
-      codeProfession: "Automotive & Design Engineer",
-      codePassion: "Mobile & Web Development",
+      codeProfession: '"Automotive & Design Engineer"',
+      codePassion: '"Mobile & Web Development"',
       stat1Number: "10+",
       stat1Text: "Tech & Tools",
       stat2Number: "3D",
       stat2Text: "Parametric Modeling",
-      stat3Number: "100%",
-      stat3Text: "Engineering Precision"
+      stat3Number: "CAD",
+      stat3Text: "Measurement to Model"
     },
     homeExplore: {
       badge: "Explore",
@@ -410,7 +410,7 @@ const TRANSLATIONS = {
       subjectPlaceholder: "Project inquiry or general question",
       messageLabel: "Your Message",
       messagePlaceholder: "Write your message here...",
-      submitBtn: "Send Message",
+      submitBtn: "Open Email Draft",
       sendingBtn: "Sending...",
       copyTooltip: "Copy",
       copiedTooltip: "Copied!"
@@ -431,6 +431,81 @@ const TRANSLATIONS = {
   }
 };
 
+
+// Project descriptions based on the author's work and supplied photographs.
+TRANSLATIONS.tr.work = {
+  "title": "Projeler & Çalışmalar",
+  "subtitle": "Gerçek parçalarla yürüttüğüm modelleme ve inceleme çalışmaları; her projedeki sorumluluğum ve ortaya çıkan sonuç.",
+  "homeTitle": "Seçili mühendislik çalışmaları",
+  "homeSubtitle": "Ölçüsünü aldığım bir amortisörün CAD modeli ve yağlama kanallarını görünür kılan motor bloğu kesiti.",
+  "shockTitle": "Amortisör ölçümü ve CAD montajı",
+  "shockType": "Bireysel dönem projesi",
+  "shockSummary": "Sanayiden temin ettiğim amortisörün ölçülerini alarak parçalarını CATIA ortamında modelledim ve montajını oluşturdum.",
+  "shockDetail": "Taşıt Teknolojisi dersi kapsamında yürüttüğüm çalışmanın ölçüm, parça modelleme, montaj ve raporlama aşamalarını tek başıma tamamladım. Raporda amortisörün görevini ve çalışma prensibini de ele aldım.",
+  "shockResult": "Sonuç: Gerçek parçadan alınan ölçülere dayalı CAD parça modelleri, montaj modeli ve çalışma prensibini açıklayan rapor.",
+  "shockAlt": "Ölçüleri alınarak CATIA ortamında modellenen amortisör montajı",
+  "treeAlt": "Amortisör montajının parçalarını ve montaj kısıtlarını gösteren CATIA ürün ağacı",
+  "treeCaption": "Parçalar ve montaj kısıtlarıyla birlikte ürün ağacı.",
+  "engineTitle": "Motor bloğunda yağlama kanallarının incelenmesi",
+  "engineType": "Bitirme projesi · 2 kişilik çalışma",
+  "engineSummary": "Motorun içindeki yağlama yollarını göstermek amacıyla temin ettiğim motor bloğunun kesim sürecini organize ederek yağlama kanallarını açığa çıkardım.",
+  "engineDetail": "Motor bloğunun teminini, kesimi yapacak atölyenin bulunmasını ve kesim işleminin yaptırılmasını üstlendim. Raporun hazırlanmasına ve gözden geçirilmesine katkı sağladım. Proje arkadaşım rapor hazırlığına ve bütçeye destek verdi.",
+  "engineResult": "Sonuç: Motor içindeki yağlama kanallarını doğrudan gözlemlemeye ve yağlama sistemini anlatmaya yönelik fiziksel bir kesit örneği.",
+  "engineAlt": "Yağlama kanallarını açığa çıkarmak amacıyla kesilmiş motor bloğunun atölye fotoğrafı",
+  "engineCaption": "Kesim sonrası motor bloğu; yağlama kanallarını incelemek için hazırlanan fiziksel örnek.",
+  "details": "Süreç ve katkım",
+  "openImage": "Görseli tam boyutta aç",
+  "viewWork": "Çalışmayı incele",
+  "otherTitle": "Diğer çalışmalar",
+  "gearTitle": "Şanzıman muhafazası modelleme",
+  "gearType": "6 kişilik ekip projesi · CATIA V5",
+  "gearSummary": "Şanzıman muhafazasını oluşturan iki parçanın ölçülerini alıp CAD modellerini hazırladım. Proje raporunun yazımına ve montaj modelinin oluşturulmasına destek verdim.",
+  "printTitle": "3D baskıya yönelik özel parçalar",
+  "printSummary": "Alan ve montaj ölçülerine göre CAD parça tasarımı ve PLA ile prototipleme çalışmaları.",
+  "appTitle": "Flutter mobil uygulamaları",
+  "appSummary": "Android ve iOS için Flutter ve Dart ile bağımsız mobil uygulamalar üzerinde çalışıyorum.",
+  "inProgress": "Geliştirme aşamasında",
+  "more": "Tüm projeler",
+  "formNote": "Bu form e-posta uygulamanızda bir taslak açar; gönderimi oradan tamamlayın. E-posta uygulamanız açılmazsa adresimi kopyalayarak mesajınızı gönderebilirsiniz.",
+  "draftOpened": "E-posta uygulamanız açıldıysa gönderimi oradan tamamlayın. Mesajınız bu sayfadan gönderilmedi."
+};
+TRANSLATIONS.en.work = {
+  "title": "Projects & Work",
+  "subtitle": "Modeling and inspection projects based on real components, with my responsibilities and the outcome of each study.",
+  "homeTitle": "Selected engineering work",
+  "homeSubtitle": "A CAD assembly measured from a real shock absorber, and an engine block section that reveals its oil passages.",
+  "shockTitle": "Shock absorber measurement and CAD assembly",
+  "shockType": "Individual semester project",
+  "shockSummary": "I sourced a shock absorber from an automotive workshop, measured its components, modeled them in CATIA and created the assembly.",
+  "shockDetail": "I completed the measurement, part modeling, assembly and report independently as a Vehicle Technology course project. The report also explained the purpose and operating principle of the shock absorber.",
+  "shockResult": "Outcome: CAD part models and an assembly based on measurements of a real component, together with a report on its operation.",
+  "shockAlt": "CATIA shock absorber assembly modeled from measurements of a real component",
+  "treeAlt": "CATIA product tree showing the shock absorber components and assembly constraints",
+  "treeCaption": "Product tree showing individual components and assembly constraints.",
+  "engineTitle": "Investigating oil passages in an engine block",
+  "engineType": "Graduation project · Team of two",
+  "engineSummary": "I sourced an engine block and organized its sectioning to expose the oil passages and demonstrate the lubrication paths inside the engine.",
+  "engineDetail": "I sourced the engine block, found a workshop and coordinated the cutting work. I also contributed to preparing and reviewing the report. My project partner supported report preparation and the project budget.",
+  "engineResult": "Outcome: A physical engine block section for observing oil passages and explaining the lubrication system.",
+  "engineAlt": "Workshop photograph of an engine block sectioned to expose its oil passages",
+  "engineCaption": "The engine block after sectioning, prepared as a physical example for examining oil passages.",
+  "details": "Process and my contribution",
+  "openImage": "Open full-size image",
+  "viewWork": "Explore this project",
+  "otherTitle": "Other work",
+  "gearTitle": "Transmission housing modeling",
+  "gearType": "Team of six · CATIA V5",
+  "gearSummary": "I measured and modeled the two parts of the transmission housing. I also contributed to the project report and assisted with the assembly model.",
+  "printTitle": "Custom parts for 3D printing",
+  "printSummary": "CAD part design around space and fit requirements, followed by prototyping in PLA.",
+  "appTitle": "Flutter mobile applications",
+  "appSummary": "I am developing independent mobile applications for Android and iOS with Flutter and Dart.",
+  "inProgress": "In development",
+  "more": "All projects",
+  "formNote": "This form opens a draft in your email app; complete sending there. If no email app opens, copy my address and send your message from your preferred email service.",
+  "draftOpened": "If your email app opened, complete sending there. Your message was not sent from this page."
+};
+
 let currentLang = "tr";
 let typewriterTimeout = null;
 
@@ -444,7 +519,6 @@ document.addEventListener("DOMContentLoaded", () => {
   initContactForm();
   initCopyButtons();
   initFooterYear();
-  initProjectModals();
   initPageTransitions();
 });
 
@@ -502,7 +576,7 @@ function setLanguage(lang) {
   }
   const metaDesc = document.querySelector('meta[name="description"]');
   if (metaDesc && t.meta && t.meta.desc) {
-    metaDesc.setAttribute("content", t.meta.desc);
+    metaDesc.setAttribute("content", pageKey === "projects" ? t.work.subtitle : t.meta.desc);
   }
 
   // Dil Rozetleri
@@ -547,6 +621,11 @@ function setLanguage(lang) {
     if (val !== undefined && val !== null) {
       el.setAttribute("title", val);
     }
+  });
+
+  document.querySelectorAll("[data-i18n-alt]").forEach(el => {
+    const value = getNestedValue(t, el.getAttribute("data-i18n-alt"));
+    if (value) el.alt = value;
   });
 
   // 4. CV İndirme Butonu Bağlantısı
@@ -614,6 +693,10 @@ function startTypewriter(roles) {
   const typewriterElem = document.getElementById("typewriter-text");
   if (!typewriterElem) return;
 
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    typewriterElem.textContent = roles[0];
+    return;
+  }
   typewriterElem.textContent = "";
 
   function type() {
@@ -653,19 +736,27 @@ function initNavigation() {
   const navLinks = document.querySelectorAll(".nav-link");
 
   if (mobileToggle && navMenu) {
-    mobileToggle.addEventListener("click", () => {
-      navMenu.classList.toggle("open");
+    const setMenuOpen = (open) => {
+      navMenu.classList.toggle("open", open);
+      mobileToggle.setAttribute("aria-expanded", String(open));
+    };
+    mobileToggle.addEventListener("click", () => setMenuOpen(!navMenu.classList.contains("open")));
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && navMenu.classList.contains("open")) {
+        setMenuOpen(false);
+        mobileToggle.focus();
+      }
     });
 
     navLinks.forEach(link => {
       link.addEventListener("click", () => {
-        navMenu.classList.remove("open");
+        setMenuOpen(false);
       });
     });
 
     document.addEventListener("click", (e) => {
       if (!navMenu.contains(e.target) && !mobileToggle.contains(e.target)) {
-        navMenu.classList.remove("open");
+        setMenuOpen(false);
       }
     });
   }
@@ -793,18 +884,10 @@ function initContactForm() {
 
     if (!isValid) return;
 
-    submitBtn.disabled = true;
-    const sendingText = TRANSLATIONS[currentLang].contact.sendingBtn;
-    submitBtn.innerHTML = `<span>${sendingText}</span>`;
-
-    setTimeout(() => {
-      submitBtn.disabled = false;
-      const submitText = TRANSLATIONS[currentLang].contact.submitBtn;
-      submitBtn.innerHTML = `<span>${submitText}</span><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>`;
-
-      showToast(TRANSLATIONS[currentLang].toast.msgSent);
-      form.reset();
-    }, 1200);
+    const subject = document.getElementById("subject").value.trim() || (isEn ? "Portfolio inquiry" : "Portföy üzerinden iletişim");
+    const body = [messageInput.value.trim(), "", nameInput.value.trim(), emailInput.value.trim()].join("\r\n");
+    window.location.href = "mailto:halilgoktas0@gmail.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+    showToast(TRANSLATIONS[currentLang].work.draftOpened);
   });
 }
 
@@ -856,68 +939,6 @@ function updateTooltip(btn, text) {
 /* ==========================================================================
    11. PROJE MODAL PENCERESİ (Projects Sayfası)
    ========================================================================== */
-function initProjectModals() {
-  const modalBackdrop = document.getElementById("project-modal");
-  const modalCloseBtn = document.getElementById("modal-close-btn");
-  if (!modalBackdrop) return;
-
-  const projectCards = document.querySelectorAll(".project-card");
-  projectCards.forEach((card, index) => {
-    card.addEventListener("click", (e) => {
-      if (e.target.closest(".project-link-icon")) return;
-      openProjectModal(index + 1);
-    });
-  });
-
-  if (modalCloseBtn) {
-    modalCloseBtn.addEventListener("click", closeProjectModal);
-  }
-
-  modalBackdrop.addEventListener("click", (e) => {
-    if (e.target === modalBackdrop) closeProjectModal();
-  });
-
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && !modalBackdrop.classList.contains("hidden")) {
-      closeProjectModal();
-    }
-  });
-}
-
-function openProjectModal(projectId) {
-  const modalBackdrop = document.getElementById("project-modal");
-  if (!modalBackdrop) return;
-
-  const t = TRANSLATIONS[currentLang].projects;
-  const modalTitle = document.getElementById("modal-title");
-  const modalCat = document.getElementById("modal-category");
-  const modalDesc = document.getElementById("modal-desc");
-
-  if (projectId === 1) {
-    if (modalTitle) modalTitle.textContent = t.proj1Title;
-    if (modalCat) modalCat.textContent = t.proj1Cat;
-    if (modalDesc) modalDesc.textContent = t.proj1Desc;
-  } else if (projectId === 2) {
-    if (modalTitle) modalTitle.textContent = t.proj2Title;
-    if (modalCat) modalCat.textContent = t.proj2Cat;
-    if (modalDesc) modalDesc.textContent = t.proj2Desc;
-  } else if (projectId === 3) {
-    if (modalTitle) modalTitle.textContent = t.proj3Title;
-    if (modalCat) modalCat.textContent = t.proj3Cat;
-    if (modalDesc) modalDesc.textContent = t.proj3Desc;
-  }
-
-  modalBackdrop.classList.remove("hidden");
-  document.body.style.overflow = "hidden";
-}
-
-function closeProjectModal() {
-  const modalBackdrop = document.getElementById("project-modal");
-  if (!modalBackdrop) return;
-  modalBackdrop.classList.add("hidden");
-  document.body.style.overflow = "";
-}
-
 /* ==========================================================================
    12. TOAST BİLDİRİMİ
    ========================================================================== */
