@@ -53,9 +53,9 @@ const TRANSLATIONS = {
       stat1Number: "10+",
       stat1Text: "Teknoloji & Araç",
       stat2Number: "3D",
-      stat2Text: "Parametrik Modelleme",
-      stat3Number: "CAD",
-      stat3Text: "Ölçümden Modele"
+      stat2Text: "Modelleme",
+      stat3Number: "App",
+      stat3Text: "Mobil & Web"
     },
     homeExplore: {
       badge: "Keşfedin",
@@ -264,9 +264,9 @@ const TRANSLATIONS = {
       stat1Number: "10+",
       stat1Text: "Tech & Tools",
       stat2Number: "3D",
-      stat2Text: "Parametric Modeling",
-      stat3Number: "CAD",
-      stat3Text: "Measurement to Model"
+      stat2Text: "Modeling",
+      stat3Number: "App",
+      stat3Text: "Mobile & Web"
     },
     homeExplore: {
       badge: "Explore",
@@ -517,7 +517,7 @@ TRANSLATIONS.tr.vision = {
   card1Btn: "CAD Çalışmalarını İncele",
   card2Tag: "İmalat & 3D Baskı",
   card2Title: "Üretim Yöntemleri & Parça Analizi",
-  card2Desc: "Motor bloğu kesim süreçleri, yağlama kanallarının doğrudan analizi, talaşlı imalat yöntemleri ve PLA malzeme ile fonksiyonel 3D baskı prototipleri.",
+  card2Desc: "Talaşlı imalat ve atölye süreçleri, parça kesit analizleri, mekanik incelemeler ve PLA ile fonksiyonel 3D baskı prototipleme.",
   card2Btn: "İnceleme Çalışmalarını Gör",
   card3Tag: "Flutter & Web Mimarisi",
   card3Title: "Yazılım & Bağımsız Geliştirme",
@@ -538,7 +538,7 @@ TRANSLATIONS.en.vision = {
   card1Btn: "Explore CAD Work",
   card2Tag: "Manufacturing & 3D Print",
   card2Title: "Production Methods & Component Analysis",
-  card2Desc: "Engine block sectioning, direct inspection of oil lubrication passages, machining methods, and functional 3D-printed PLA prototyping.",
+  card2Desc: "Machining and workshop processes, component cross-section analysis, mechanical inspections, and functional 3D-printed PLA prototyping.",
   card2Btn: "View Inspection Studies",
   card3Tag: "Flutter & Web Architecture",
   card3Title: "Software & Indie Development",
