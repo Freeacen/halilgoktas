@@ -509,7 +509,7 @@ TRANSLATIONS.en.work = {
 // Mühendislik Yaklaşımı & Vizyon Özeti (Ana Sayfa İçeriği)
 TRANSLATIONS.tr.vision = {
   badge: "Mühendislik Yaklaşımı",
-  title: "Ölçümden Modele, Tasarımdan Koda",
+  title: "Temel Yetkinlikler & Çalışma Felsefesi",
   subtitle: "Otomotiv mühendisliği titizliğini modern yazılım vizyonuyla birleştiren çalışma felsefem ve temel odak alanlarım.",
   card1Tag: "CATIA V5 · Parametrik",
   card1Title: "CAD & Parça Hassasiyeti",
@@ -530,7 +530,7 @@ TRANSLATIONS.tr.vision = {
 
 TRANSLATIONS.en.vision = {
   badge: "Engineering Approach",
-  title: "From Measurement to Model, From Design to Code",
+  title: "Core Competencies & Working Philosophy",
   subtitle: "My working principles and focus areas bridging automotive engineering rigor with modern software craft.",
   card1Tag: "CATIA V5 · Parametric",
   card1Title: "CAD & Dimensional Precision",
