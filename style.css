@@ -716,47 +716,19 @@ button, input, textarea {
   color: var(--text-muted);
 }
 
-/* 3D Yaşayan Pop-Out Karakter Sahnesi */
+/* 3D Yaşayan Karakter Sahnesi */
 .profile-avatar-stage {
   position: relative;
   width: 100%;
-  max-width: 340px;
-  height: 185px;
-  margin: 0 auto 20px auto;
+  max-width: 320px;
+  height: 180px;
+  margin: 0 auto 16px auto;
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  perspective: 1000px;
 }
 
-/* Holografik Arka Plan Portal Halkası */
-.portal-ring {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 138px;
-  height: 138px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(14, 165, 233, 0.28) 0%, rgba(37, 99, 235, 0.38) 75%, rgba(14, 165, 233, 0.65) 100%);
-  border: 2px solid rgba(56, 189, 248, 0.7);
-  box-shadow: 0 0 26px rgba(14, 165, 233, 0.45), inset 0 0 18px rgba(14, 165, 233, 0.3);
-  animation: portalGlowPulse 4s ease-in-out infinite;
-  z-index: 1;
-}
-
-@keyframes portalGlowPulse {
-  0%, 100% {
-    box-shadow: 0 0 22px rgba(14, 165, 233, 0.4), inset 0 0 14px rgba(14, 165, 233, 0.25);
-    border-color: rgba(56, 189, 248, 0.6);
-  }
-  50% {
-    box-shadow: 0 0 36px rgba(14, 165, 233, 0.7), inset 0 0 22px rgba(14, 165, 233, 0.45);
-    border-color: rgba(56, 189, 248, 0.95);
-  }
-}
-
-/* Daireden Dışarı Taşan 3D Karakter */
+/* 3D Karakter Kapsayıcısı */
 .character-wrapper {
   position: relative;
   z-index: 2;
@@ -765,9 +737,6 @@ button, input, textarea {
   align-items: flex-end;
   width: 175px;
   height: 175px;
-  transform-origin: bottom center;
-  animation: characterFloatLife 4s ease-in-out infinite;
-  will-change: transform;
 }
 
 .character-wrapper picture {
@@ -783,8 +752,8 @@ button, input, textarea {
   height: 175px;
   object-fit: contain;
   display: block;
-  filter: drop-shadow(0 12px 18px rgba(0, 0, 0, 0.42));
-  transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+  filter: drop-shadow(0 10px 18px rgba(0, 0, 0, 0.4));
+  transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
   pointer-events: none;
 }
 
@@ -792,21 +761,12 @@ button, input, textarea {
   transform: scale(1.03) translateY(-2px);
 }
 
-@keyframes characterFloatLife {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-7px);
-  }
-}
-
-/* Yüzen Vurgu Rozetleri (Dengeli Mesafe: Ne Çok Uzak, Ne Çok Yakın) */
+/* Yüzen Vurgu Rozetleri (Karaktere Yakın ve Kart İçine Sığacak Şekilde) */
 .floating-badge {
   position: absolute;
-  padding: 6px 14px;
+  padding: 5px 12px;
   border-radius: var(--radius-full);
-  font-size: 0.8rem;
+  font-size: 0.76rem;
   font-weight: 600;
   background: var(--bg-surface);
   border: 1px solid var(--border-color);
@@ -818,25 +778,25 @@ button, input, textarea {
 }
 
 .badge-code {
-  top: 18px;
-  right: calc(50% + 94px);
+  top: 14px;
+  right: calc(50% + 48px);
   animation: floatBadgeCode 3.8s ease-in-out infinite;
 }
 
 .badge-tech {
-  bottom: 12px;
-  left: calc(50% + 94px);
+  bottom: 8px;
+  left: calc(50% + 48px);
   animation: floatBadgeTech 3.8s ease-in-out infinite 1.9s;
 }
 
 @keyframes floatBadgeCode {
   0%, 100% { transform: translateY(0) rotate(-1deg); }
-  50% { transform: translateY(-7px) rotate(1.5deg); }
+  50% { transform: translateY(-5px) rotate(1deg); }
 }
 
 @keyframes floatBadgeTech {
   0%, 100% { transform: translateY(0) rotate(1deg); }
-  50% { transform: translateY(-7px) rotate(-1.5deg); }
+  50% { transform: translateY(-5px) rotate(-1deg); }
 }
 
 
@@ -1983,11 +1943,6 @@ button, input, textarea {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-  }
-
-  .portal-ring {
-    width: 120px;
-    height: 120px;
   }
 
   .character-wrapper {
