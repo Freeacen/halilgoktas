@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">HG universal minimal monogram</title>
+  <desc id="desc">A minimal HG monogram designed for both light and dark website themes.</desc>
+  <rect x="16" y="16" width="224" height="224" rx="58" fill="#22c7f2"/>
+  <path d="M58 62v132M58 128h72M130 62v132" fill="none" stroke="#071426" stroke-width="21" stroke-linecap="round"/>
+  <path d="M202 91c-11-19-28-29-49-29-34 0-59 29-59 66s25 66 59 66c21 0 38-10 49-29M202 128h-46" fill="none" stroke="#f4fbff" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
